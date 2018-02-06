@@ -1,6 +1,6 @@
 # MySQL
 
-## 索引:jack_o_lantern:
+## 索引 :jack_o_lantern:
 
 ### 介绍
 
@@ -87,7 +87,7 @@ Archive 不支持事务，支持表级别锁定，不支持 B-tree、Hash、Full
 
 　　　　FULLTEXT索引是按照分词原理建立索引的。西方文字中，大部分为字母文字，分词可以很方便的按照空格进行分割。但很明显，中文不能按照这种方式进行分词。这里介绍一个Mysql的中文分词插件Mysqlcft，有了它，就可以对中文进行分词，想了解的可以查看Mysqlcft，当然还有其他的分词插件可以使用。
 
-## MySQL索引管理:jack_o_lantern:
+## MySQL索引管理 :jack_o_lantern:
 
 ### 创建索引
 
@@ -144,7 +144,7 @@ create index 索引名 on 表名(字段,字段)
 DROP INDEX 索引名 ON 表名字;
 ```
 
-## 事务:jack_o_lantern:
+## 事务 :jack_o_lantern:
 
 ### 什么是事务 
 
