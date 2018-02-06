@@ -1,4 +1,4 @@
-# MySQL一
+# MySQL
 
 ## 用户及权限操作:jack_o_lantern:
 
