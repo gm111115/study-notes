@@ -1,5 +1,1 @@
-## Welcome to Poppy's blog
-
-
-mmp
-
+# Welcome to Poppy's blog!
