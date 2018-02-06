@@ -1,6 +1,6 @@
 # MySQL
 
-## 视图:jack_o_lantern:
+## 视图 :jack_o_lantern:
 
 视图是一个虚拟表（非真实存在），其本质是【根据SQL语句获取动态的数据集，并为其命名】，用户使用时只需使用【名称】即可获取结果集，可以将该结果集当做表来使用。
 
@@ -63,7 +63,7 @@ DELETE from 视图名 where 条件;
 drop view 视图名;
 ```
 
-## 触发器:jack_o_lantern:
+## 触发器 :jack_o_lantern:
 
 触发器(trigger)：监视某种情况，并触发某种操作
 
@@ -105,7 +105,7 @@ end
 drop trigger 触发器名;
 ```
 
-## 存储过程:jack_o_lantern:
+## 存储过程 :jack_o_lantern:
 
 ### 概念
 
@@ -179,7 +179,7 @@ END
 call 存储过程名称(参数1 参数类型,参数2 参数类型);
 ```
 
-## 函数:jack_o_lantern:
+## 函数 :jack_o_lantern:
 
 ### 自定义函数
 
