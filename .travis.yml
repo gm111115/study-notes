@@ -9,7 +9,7 @@ branches:
     - master
 env:
   global:
-    - GH_REF: https://github.com/gm111115/study-notes.git
+    - GH_REF: github.com/gm111115/study-notes.git
 #sudo: false
 script:
   - bash summary_create.sh
