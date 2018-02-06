@@ -1,6 +1,6 @@
 # MySQL概述
 
-## 数据库简介:jack_o_lantern:
+## 数据库简介 :jack_o_lantern:
 
 ### 数据(Data)
 
@@ -102,7 +102,7 @@ sql server是微软公司的产品，主要应用于大中型企业，如联想�
 
 　　d：数据库恢复
 
-## SQL语:jack_o_lantern:
+## SQL语 :jack_o_lantern:
 
 **SQL**(Structured Query Language)即结构化查询语言，数据库管理系统专门通过SQL语言来管理数据库中的数据，与数据库通信
 
@@ -123,7 +123,7 @@ sql server是微软公司的产品，主要应用于大中型企业，如联想�
 > - 数据查询语言（Data Query Language，DQL）：SELECT语句。主要用于查询数据
 > - 数据控制语言（Data Control Language ，DCL）语句：数据库控制语言。主要用于控制用户的访问权限。其中GRANT语句用于给用户增加权限，REVOKE语句用于收回用户的权限
 
-## 数据库分类:jack_o_lantern:
+## 数据库分类 :jack_o_lantern:
 
 ### 关系型数据库
 
@@ -165,7 +165,7 @@ NoSQL一词最早出现于1998年，是Carlo Strozzi开发的一个轻量、开�
 
 　　MemCache是一套分布式的高速缓存系统，由LiveJournal的Brad Fitzpatrick开发，但目前被许多网站使用以提升网站的访问速度，尤其对于一些大型的、需要频繁访问数据库的网站访问速度提升效果十分显著。这是一套开放源代码软件，以BSD license授权发布
 
-## MySQL介绍:jack_o_lantern:
+## MySQL介绍 :jack_o_lantern:
 
 MySQL原本是一个开放源代码的关系数据库管理系统（DBMS），原开发者为瑞典的MySQL AB公司，该公司于2008年被昇阳微系统（Sun Microsystems）收购。2009年，甲骨文公司（Oracle）收购昇阳微系统公司，MySQL成为Oracle旗下产品。在本教程中，会让大家快速掌握MySQL的基本知识，并轻松使用MySQL数据库
 
@@ -173,7 +173,7 @@ MySQL在过去由于性能高、成本低、可靠性好，已经成为最流行
 
 但被甲骨文公司收购后，Oracle大幅调涨MySQL商业版的售价，且甲骨文公司不再支持另一个自由软件项目OpenS olaris的发展，因此导致自由软件社区们对于Oracle是否还会持续支持MySQL社区版（MySQL之中唯一的免费版本）有所隐忧，因此原先一些使用MySQL的开源软件逐渐转向其它的数据库。例如维基百科已于2013年正式宣布将从MySQL迁移到MariaDB数据库。MySQL的创始人Monty Widenius以MySQL为基础，成立分支计划MariaDB
 
-## MySQL发展史:jack_o_lantern:
+## MySQL发展史 :jack_o_lantern:
 
 很多人以为MySQL是最近15年内才出现的数据库，其实MySQL数据库的历史可以追溯到1979年，那时 Bill Gates 退学没多久，微软公司也才刚刚起步，而Larry的Oracle公司也才成立不久。那时有一个天才程序员 Monty Widenius 用 BASIC 设计了一个报表工具，过了不久，又将此工具使用 C 语言重写，一直到 UNIX 平台，当时只是一个底层的面向报表存储引擎名叫Unireg
 
@@ -188,7 +188,7 @@ MySQL在过去由于性能高、成本低、可靠性好，已经成为最流行
 - 2010年12月，MySQL 5.5发布，其主要新特性包括半同步的复制及对SIGNAL/RESIGNAL的异常处理功能的支持，最重要的是InnoDB存储引擎终于变为当前MySQL的默认存储引擎
 - 2013年6月18日，甲骨文公司修改MySQL授权协议，移除了GPL。但随后有消息称这是一个bug
 
-## MySQL版本:jack_o_lantern:
+## MySQL版本 :jack_o_lantern:
 
 MySQL针对不同的用户，分了社区版和企业服务器版，还提供一些其它版本，是属于MySQL相关工具。
 
@@ -204,7 +204,7 @@ MySQL 版本命命机制由三个数字组成，例如mysql-5.6.33-osx10.11-x86_
 - 第二个数字（7）次版本号：当你做了向下兼容的功能性新增，合计，主要和次要的数字构成发布系列号。该系列号描述了稳定的特征集
 - 第三个数字（1）修订号：当你做了向下兼容的问题修正。这是一个新的bugfix释放增加。在大多数情况下，在一系列最新版本是最好的选择
 
-## MySQL的优势:jack_o_lantern:
+## MySQL的优势 :jack_o_lantern:
 
 - 使用C和C++编写，并使用了多种编译器进行测试，保证源代码的可移植性
 - 支持AIX、BSDi、FreeBSD、HP-UX、Linux、Mac OS、Novell NetWare、NetBSD、OpenBSD、OS/2 Wrap、Solaris、Windows等多种操作系统
