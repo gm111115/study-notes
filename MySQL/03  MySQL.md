@@ -1,4 +1,4 @@
-# MySQL三
+# MySQL
 
 ## 索引:jack_o_lantern:
 
