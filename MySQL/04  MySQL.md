@@ -1,6 +1,6 @@
 # MySQL
 
-## 用户及权限操作:jack_o_lantern:
+## 用户及权限操作 :jack_o_lantern:
 
 ### 用户操作
 
@@ -48,7 +48,7 @@ FLUSH PRIVILEGES
 12 revoke select on db_name.* from　'用户名'@'IP';　　　
 ```
 
-## 库操作:jack_o_lantern:
+## 库操作 :jack_o_lantern:
 
 ### 系统数据库
 
@@ -95,7 +95,7 @@ DORP DATABASE 数据库名;
 alter database db1 charset utf8;
 ```
 
-## 表操作:jack_o_lantern:
+## 表操作 :jack_o_lantern:
 
 ### 表介绍
 
@@ -177,7 +177,7 @@ RENAME TABLE 旧表名 TO 新表名;
 ALTER TABLE 旧表名 RENAME 新表名;
 ```
 
-## 数据操作:jack_o_lantern:
+## 数据操作 :jack_o_lantern:
 
 ### 新增
 
