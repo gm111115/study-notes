@@ -1,8 +1,6 @@
 # The history of Python
 
-## Origin  :jack_o_lantern:
-
-:jack_o_lantern:
+## Origin :jack_o_lantern:
 
 python的创始人为吉多·范罗苏姆（Guido van Rossum）。1989年的圣诞节期间，吉多·范罗苏姆（中文名字：龟叔）为了在阿姆斯特丹打发时间，决心开发一个新的脚
 本解释程序，作为ABC语言的一种继承。
