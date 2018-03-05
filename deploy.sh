@@ -12,11 +12,12 @@ if [ $? -ne 0 ];then
     exit 1
 fi
 cd _book
+sed -i '/a href.*\.md/s#\.md#.html#g;/a href.*README\.html/s#README\.html##g' SUMMARY.html
 git init
 git checkout --orphan gh-pages
 git status
 sleep 5
 git add .
 git commit -m "Update gh-pages"
-git remote add origin https://github.com/gm111115/study-notes.git
+git remote add origin git@github.com:gm111115/study-notes.git
 git push -f "https://${GH_TOKEN}@${GH_REF}" gh-pages:gh-pages
