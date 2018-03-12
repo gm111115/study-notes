@@ -1,4 +1,4 @@
-# MySQL概述
+# MySQL
 
 ## 数据库简介 :jack_o_lantern:
 

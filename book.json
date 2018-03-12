@@ -3,6 +3,7 @@
     "description": "study-notes",
     "extension": null,
     "generator": "site",
+     "title": "Poppy",
     "links": {
         "sharing": {
             "all": null,
@@ -45,6 +46,4 @@
             "tocLevel3Icon": "fa fa-hand-o-right"
         }
     }
-    "title": "Poppy",
-    "variables": {}
 }
