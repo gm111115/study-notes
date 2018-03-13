@@ -1,4 +1,4 @@
-# Rcursion Function:maple_leaf:
+# Rcursion Function
 
 ## 递归的定义:jack_o_lantern:
 
