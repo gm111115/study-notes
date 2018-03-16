@@ -1,14 +1,14 @@
 # Decorator
 
-## 本质
+## 本质:jack_o_lantern:
 
 装饰器的本质——一个闭包函数
 
-## 功能
+## 功能:jack_o_lantern:
 
 装饰器的功能——在不修改原函数本身及其调用方式的前提下在函数前后添加功能
 
-## 形成
+## 形成:jack_o_lantern:
 
 ```
 #装饰器简单版
@@ -173,7 +173,7 @@ print(index.__doc__)
 print(index.__name__)
 ```
 
-## 开放封闭原则
+## 开放封闭原则:jack_o_lantern:
 
 ​	**对扩展是开放的**
 
