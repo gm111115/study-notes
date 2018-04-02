@@ -212,3 +212,162 @@ select 函数名(参数1,参数2),表字段 from 表名
 ```
 drop function 函数名;
 ```
+
+## 事务 :jack_o_lantern:
+
+### 什么是事务
+
+​	事务是应用程序中一系列严密的操作，所有操作必须成功完成，否则在每个操作中所作的所有更改都会被撤消。也就是事务具有原子性，一个事务中的一系列的操作要么全部成功，要么一个都不做。 
+​	事务的结束有两种，当事务中的所以步骤全部成功执行时，事务提交。如果其中一个步骤失败，将发生回滚操作，撤消之前到事务开始时的所以操作。
+
+　　总结:事务就是一组操作,要么全部完成,要么全部失败!
+
+### 事物特性ACID
+
+　　事务具有四个特征：原子性（ Atomicity ）、一致性（ Consistency ）、隔离性（ Isolation ）和持续性（ Durability ）。这四个特性简称为 ACID 特性。 
+
+　　1 、原子性  (事物内的操作,要么全部成功,要么全部失败)
+​	事务是数据库的逻辑工作单位，事务中包含的各操作要么都做，要么都不做
+
+　　2 、一致性 (事物之前之后,前后数据的一致性)
+​	事务执行的结果必须是使数据库从一个一致性状态变到另一个一致性状态。因此当数据库只包含成功事务提交的结果时，就说数据库处于一致性状态　如果数据库系统 运行中发生故障，有些事务尚未完成就被迫中断，这些未完成事务对数据库所做的修改有一部分已写入物理数据库，这时数据库就处于一种不正确的状态，或者说是 不一致的状态。 
+
+　　3 、隔离性(多个事物时,相互不能干扰) 
+​	一个事务的执行不能被其它事务干扰。即一个事务内部的操作及使用的数据对其它并发事务是隔离的，并发执行的各个事务之间不能互相干扰。
+
+　   4 、持续性(一旦事物提交(commit)之后,是不可回滚的) 
+​	持续性也称永久性，指一个事务一旦提交，它对数据库中的数据的改变就应该是永久性的。接下来的其它操作或故障不应该对其执行结果有任何影响。 
+
+### 实例操作
+
+​	1.开启事物  start transaction
+
+​	2.提交事物   commit
+
+​	3.回滚事物   rollback
+
+```
+create table user(
+id int primary key auto_increment,
+name char(32),
+balance int
+);
+
+insert into user(name,balance)
+values
+('w',1000),
+('l',1000),
+('y',1000);
+
+#原子操作
+start transaction;
+update user set balance=900 where name='w'; # w支付100元
+update user set balance=1010 where name='l'; # l拿走10元
+update user set balance=1090 where name='y'; # y家拿到90元
+commit;
+
+#出现异常，回滚到初始状态
+start transaction;
+update user set balance=900 where name='w'; # w支付100元
+update user set balance=1010 where name='l'; # l拿走10元
+uppdate user set balance=1090 where name='y'; # y拿到90元,出现异常没有拿到
+rollback;
+commit;
+
+mysql> select * from user;
++----+------+---------+
+| id | name | balance |
++----+------+---------+
+|  1 |  w   |    1000 |
+|  2 |  l   |    1000 |
+|  3 |  y   |    1000 |
++----+------+---------+
+3 rows in set (0.00 sec)
+```
+
+
+
+## 流程控制:jack_o_lantern:
+
+### 条件语句
+
+```
+复制代码
+delimiter //
+CREATE PROCEDURE proc_if ()
+BEGIN
+
+    declare i int default 0;
+    if i = 1 THEN
+        SELECT 1;
+    ELSEIF i = 2 THEN
+        SELECT 2;
+    ELSE
+        SELECT 7;
+    END IF;
+
+END //
+delimiter ;
+```
+
+### 循环语句
+
+```
+delimiter //
+CREATE PROCEDURE proc_while ()
+BEGIN
+
+    DECLARE num INT ;
+    SET num = 0 ;
+    WHILE num < 10 DO
+        SELECT
+            num ;
+        SET num = num + 1 ;
+    END WHILE ;
+
+END //
+delimiter ;
+```
+
+repeat循环
+
+```
+delimiter //
+CREATE PROCEDURE proc_repeat ()
+BEGIN
+
+    DECLARE i INT ;
+    SET i = 0 ;
+    repeat
+        select i;
+        set i = i + 1;
+        until i >= 5
+    end repeat;
+
+END //
+delimiter ;
+```
+
+loop
+
+```
+BEGIN
+    
+    declare i int default 0;
+    loop_label: loop
+        
+        set i=i+1;
+        if i<8 then
+            iterate loop_label;
+        end if;
+        if i>=10 then
+            leave loop_label;
+        end if;
+        select i;
+    end loop loop_label;
+
+END
+```
+
+
+
