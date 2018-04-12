@@ -245,22 +245,36 @@ var c = a + b;
 console.log(c);  // 得到Helloworld
 ```
 
+
+
+字符串创建(两种方式)
+​       1、变量 = “字符串”
+​       2、字串对象名称 = new String (字符串)
+
+```
+var str1="hello world";
+var str1= new String("hello world");
+```
+
 常用方法
 
-| 方法                         | 说明        |
-| -------------------------- | --------- |
-| .length                    | 返回长度      |
-| .trim()                    | 移除空白      |
-| .trimLeft()                | 移除左边的空白   |
-| .trimRight()               | 移除右边的空白   |
-| .charAt(n)                 | 返回第n个字符   |
-| .concat(value, ...)        | 拼接        |
-| .indexOf(substring, start) | 子序列位置     |
-| .substring(from, to)       | 根据索引获取子序列 |
-| .slice(start, end)         | 切片        |
-| .toLowerCase()             | 小写        |
-| .toUpperCase()             | 大写        |
-| .split(delimiter, limit)   | 分割        |
+| 方法                                       | 说明                                |
+| ---------------------------------------- | --------------------------------- |
+| .length                                  | 获取字符串的长度                          |
+| .trim()                                  | 去除字符串两边空格                         |
+| .trimLeft()                              | 移除字符串左边的空白                        |
+| .trimRight()                             | 移除字符串右边的空白                        |
+| .charAt(index)                           | 获取指定位置字符，其中index为要获取的字符索引         |
+| .concat(value, ...)                      | 拼接                                |
+| .indexOf(findstr,start) .lastIndexOf(findstr) | 子序列位置                             |
+| .slice(start, end)                       | 切片操作字符串                           |
+| .toLowerCase()                           | 转为小写                              |
+| .toUpperCase()                           | 转为大写                              |
+| .split(delimiter, limit)                 | 分割字符串                             |
+| .match(regexp)                           | 返回匹配字符串的数组，如果没有匹配则返回null          |
+| .search(regexp)                          | 返回匹配字符串的首字符位置索引                   |
+| .substring(start,length) .substring(start, end) | start表示开始位置，length表示截取长度，end是结束位置 |
+| .replace(findstr,tostr)                  | 字符串替换                             |
 
 拼接字符串一般使用“+”
 
@@ -358,7 +372,7 @@ var arrname = new Array(长度);
 关于sort
 
 ```
-/*如果调用sort方法时没有传入参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。
+如果调用sort方法时没有传入参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。
 
 如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：
 
@@ -401,6 +415,19 @@ var a = [10, 20, 30, 40];
 for (var i=0;i<a.length;i++) {
   console.log(i);
 }
+```
+
+```
+#js中数组的特性
+         
+//java中数组的特性,  规定是什么类型的数组,就只能装什么类型.只有一种类型.
+//js中的数组特性1: js中的数组可以装任意类型,没有任何限制.
+//js中的数组特性2: js中的数组,长度是随着下标变化的.用到多长就有多长.
+	var arr5 = ['abc',123,1.14,true,null,undefined,new String('1213'),new Function('a','b','alert(a+b)')];
+     /*  alert(arr5.length);//8
+         arr5[10] = "hahaha";
+         alert(arr5.length); //11
+         alert(arr5[9]);// undefined */
 ```
 
 # 运算符
@@ -1042,4 +1069,40 @@ foo();  // 执行后的结果是？
 
 # 对象和方法
 
-JavaScript中的所有事物都是对象：字符串、数字、数组、日期，等等。在JavaScript中，对象是拥有属性和方法的数据。
+在JavaScript中除了null和undefined以外其他的数据类型都被定义成了对象，也可以用创建对象的方法定义变量，String、Number、Math、Array、Date、RegExp都是JavaScript中重要的内置对象，在JavaScript程序大多数功能都是基于对象实现的。在JavaScript中，对象是拥有属性和方法的数据。
+
+```
+<script language="javascript">
+var aa=Number.MAX_VALUE; 
+//利用数字对象获取可表示最大数
+var bb=new String("hello JavaScript"); 
+//创建字符串对象
+var cc=new Date();
+//创建日期对象
+var dd=new Array("星期一","星期二","星期三","星期四"); 
+//数组对象
+</script>
+```
+
+注意var s1 = "abc"和var s2 = new String("abc")的区别：typeof s1 --> string而 typeof s2 --> Object
+
+| 类型   | 内置对象     | 介绍      |
+| :--- | -------- | :------ |
+| 数据对象 | Number   | 数字对象    |
+|      | String   | 字符串对象   |
+|      | Boolean  | 布尔值对象   |
+| 组和对象 | Array    | 数组对象    |
+|      | Math     | 数学对象    |
+|      | Date     | 日期对象    |
+| 高级对象 | Object   | 自定义对象   |
+|      | Error    | 错误对象    |
+|      | Function | 函数对象    |
+|      | RegExp   | 正则表达式对象 |
+|      | Global   | 全局对象    |
+
+
+
+
+
+
+
