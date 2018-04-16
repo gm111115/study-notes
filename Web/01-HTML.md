@@ -51,18 +51,18 @@ if __name__ == '__main__':
 ```
 
 1. <!DOCTYPE html>声明为HTML5文档。
-2. <html>、</html>是文档的开始标记和结束的标记。是HTML页面的根元素，在它们之间是文档的头部（head）和主体（body）。
-3. <head>、</head>定义了HTML文档的开头部分。它们之间的内容不会在浏览器的文档窗口显示。包含了文档的元（meta）数据。
-4. <title>、</title>定义了网页标题，在浏览器标题栏显示。
-5. <body>、</body>之间的文本是可见的网页主体内容。
+2. \<html>、\</html>是文档的开始标记和结束的标记。是HTML页面的根元素，在它们之间是文档的头部（head）和主体（body）。
+3. \<head>、\</head>定义了HTML文档的开头部分。它们之间的内容不会在浏览器的文档窗口显示。包含了文档的元（meta）数据。
+4. \<title>、\</title>定义了网页标题，在浏览器标题栏显示。
+5. \<body>、\</body>之间的文本是可见的网页主体内容。
 
-**注意：**对于中文网页需要使用 **<meta charset="utf-8">** 声明编码，否则会出现乱码。有些浏览器会设置 GBK 为默认编码，则你需要设置为 **<meta charset="gbk">。**
+**注意：**对于中文网页需要使用 **\<meta charset="utf-8">** 声明编码，否则会出现乱码。有些浏览器会设置 GBK 为默认编码，则你需要设置为 **\<meta charset="gbk">。**
 
 ## HTML标签格式
 
-- HTML标签是由尖括号包围的关键字，如<html>, <div>等
-- HTML标签通常是成对出现的，比如：<div>和</div>，第一个标签是开始，第二个标签是结束。结束标签会有斜线。
-- 也有一部分标签是单独呈现的，比如：<br/>、<hr/>、<img src=" " />等。
+- HTML标签是由尖括号包围的关键字，如\<html>, \<div>等
+- HTML标签通常是成对出现的，比如：\<div>和\</div>，第一个标签是开始，第二个标签是结束。结束标签会有斜线。
+- 也有一部分标签是单独呈现的，比如：\<br/>、\<hr/>、\<img src=" " />等。
 - 标签里面可以有若干属性，也可以不带属性。
 
 **标签的语法：**
@@ -86,7 +86,7 @@ if __name__ == '__main__':
 
 **<!DOCTYPE >标签**
 
-<!DOCTYPE> 声明位于文档中的最前面的位置，<!DOCTYPE> 声明不是 HTML 标签，处于 <html> 标签之前。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
+<!DOCTYPE> 声明位于文档中的最前面的位置，<!DOCTYPE> 声明不是 HTML 标签，处于\<html> 标签之前。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
 
 作用：声明文档的解析类型(document.compatMode)，避免浏览器的怪异模式。
 document.compatMode：
@@ -98,19 +98,19 @@ document.compatMode：
 
 ## head内常用标签
 
-| 标签                | 意义              |
-| ----------------- | --------------- |
-| <title></title>   | 定义网页标题          |
-| <style></style>   | 定义内部样式表         |
-| <script></script> | 定义JS代码或引入外部JS文件 |
-| <link/>           | 引入外部样式表文件       |
-| <meta/>           | 定义网页原信息         |
+| 标签                  | 意义              |
+| ------------------- | --------------- |
+| \<title>\</title>   | 定义网页标题          |
+| \<style>\</style>   | 定义内部样式表         |
+| \<script>\</script> | 定义JS代码或引入外部JS文件 |
+| \<link/>            | 引入外部样式表文件       |
+| \<meta/>            | 定义网页原信息         |
 
  Meta标签介绍：
 
-- <meta>元素可提供有关页面的原信息（mata-information）,针对搜索引擎和更新频度的描述和关键词。
-- <meta>标签位于文档的头部，不包含任何内容。
-- <meta>提供的信息是用户不可见的。
+- \<meta>元素可提供有关页面的原信息（mata-information）,针对搜索引擎和更新频度的描述和关键词。
+- \<meta>标签位于文档的头部，不包含任何内容。
+- \<meta>提供的信息是用户不可见的。
 
 meta标签的组成：meta标签共有两个属性，它们分别是http-equiv属性和name 属性，不同的属性又有不同的参数值，这些不同的参数值就实现了不同的网页功能。 
 
@@ -353,16 +353,16 @@ HTML表单是HTML元素中较为复杂的部分，表单往往和脚本、动态
 
 | type属性值  | 表现形式   | 对应代码                                     |
 | -------- | ------ | ---------------------------------------- |
-| text     | 单行输入文本 | <input type=text" />                     |
-| password | 密码输入框  | <input type="password"  />               |
-| date     | 日期输入框  | <input type="date" />                    |
-| checkbox | 复选框    | <input type="checkbox" checked="checked"  /> |
-| radio    | 单选框    | <input type="radio"  />                  |
-| submit   | 提交按钮   | <input type="submit" value="提交" />       |
-| reset    | 重置按钮   | <input type="reset" value="重置"  />       |
-| button   | 普通按钮   | <input type="button" value="普通按钮"  />    |
-| hidden   | 隐藏输入框  | <input type="hidden"  />                 |
-| file     | 文本选择框  | <input type="file"  />                   |
+| text     | 单行输入文本 | <input type=text">                       |
+| password | 密码输入框  | \<input type="password">                 |
+| date     | 日期输入框  | \<input type="date" />                   |
+| checkbox | 复选框    | \<input type="checkbox" checked="checked"> |
+| radio    | 单选框    | \<input type="radio">                    |
+| submit   | 提交按钮   | \<input type="submit" value="提交">        |
+| reset    | 重置按钮   | \<input type="reset" value="重置">         |
+| button   | 普通按钮   | \<input type="button" value="普通按钮">      |
+| hidden   | 隐藏输入框  | \<input type="hidden">                   |
+| file     | 文本选择框  | \<input type="file">                     |
 
  属性说明:
 
@@ -397,11 +397,11 @@ HTML表单是HTML元素中较为复杂的部分，表单往往和脚本、动态
 
 #### label标签
 
-定义：<label> 标签为 input 元素定义标注（标记）。
+定义：\<label> 标签为 input 元素定义标注（标记）。
 说明：
 
 1. label 元素不会向用户呈现任何特殊效果。
-2. <label> 标签的 for 属性值应当与相关元素的 id 属性值相同。
+2. \<label> 标签的 for 属性值应当与相关元素的 id 属性值相同。
 
 ```
 <form action="">
