@@ -28,7 +28,7 @@
 
 ## 内部样式
 
-嵌入式是将CSS样式集中写在网页的<head></head>标签对的<style></style>标签对中
+嵌入式是将CSS样式集中写在网页的\<head>\</head>标签对的\<style>\</style>标签对中
 
 ```
 <head>
@@ -54,7 +54,7 @@
 
 ### 导入式
 
-导入式使用CSS规则引入外部CSS文件，<style>标记也是写在<head>标记中    
+导入式使用CSS规则引入外部CSS文件，\<style>标记也是写在\<head>标记中    
 
 ```
 <style type="text/css">
