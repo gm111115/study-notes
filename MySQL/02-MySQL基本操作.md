@@ -241,6 +241,7 @@ SELECT 字段1,字段2... FROM 表名
 from                
 where
 group by
+聚合
 having
 select
 distinct
