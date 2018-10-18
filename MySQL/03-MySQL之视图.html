@@ -1,0 +1,821 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MySQL之视图 · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Poppy">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04-MySQL之索引.html" />
+    
+    
+    <link rel="prev" href="02-MySQL之基本操作.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Poppy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Django/">
+            
+                <a href="../Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Flask/">
+            
+                <a href="../Flask/">
+            
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="01-MySQL之概述.html">
+            
+                <a href="01-MySQL之概述.html">
+            
+                    
+                    MySQL之概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="02-MySQL之基本操作.html">
+            
+                <a href="02-MySQL之基本操作.html">
+            
+                    
+                    MySQL之基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="03-MySQL之视图.html">
+            
+                <a href="03-MySQL之视图.html">
+            
+                    
+                    MySQL之视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="04-MySQL之索引.html">
+            
+                <a href="04-MySQL之索引.html">
+            
+                    
+                    MySQL之索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Python/01-Basic Data Type.html">
+            
+                <a href="../Python/01-Basic Data Type.html">
+            
+                    
+                    Basic Data Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Python/02-File Operations.html">
+            
+                <a href="../Python/02-File Operations.html">
+            
+                    
+                    File Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Python/03-Function.html">
+            
+                <a href="../Python/03-Function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Python/04-Function Advanced.html">
+            
+                <a href="../Python/04-Function Advanced.html">
+            
+                    
+                    Function Advanced
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Python/05-Recursion.html">
+            
+                <a href="../Python/05-Recursion.html">
+            
+                    
+                    Recursion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Python/06-Decorator.html">
+            
+                <a href="../Python/06-Decorator.html">
+            
+                    
+                    Decorator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Python/07-Object-Oriented.html">
+            
+                <a href="../Python/07-Object-Oriented.html">
+            
+                    
+                    Object-Oriented
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Python/08-Object-Oriented Advanced.html">
+            
+                <a href="../Python/08-Object-Oriented Advanced.html">
+            
+                    
+                    Object-Oriented Advanced
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../Python/README .html">
+            
+                <a href="../Python/README .html">
+            
+                    
+                    README 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Socket/">
+            
+                <a href="../Socket/">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Socket/01-Socket Introduce.html">
+            
+                <a href="../Socket/01-Socket Introduce.html">
+            
+                    
+                    Socket Introduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Web/">
+            
+                <a href="../Web/">
+            
+                    
+                    Web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Web/01-HTML.html">
+            
+                <a href="../Web/01-HTML.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Web/02-CSS.html">
+            
+                <a href="../Web/02-CSS.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Web/03-JavaScript.html">
+            
+                <a href="../Web/03-JavaScript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Web/04-BOM And DOM.html">
+            
+                <a href="../Web/04-BOM And DOM.html">
+            
+                    
+                    BOM And DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MySQL之视图</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mysql"><b></b>MySQL</a></li><ul><li><span class="title-icon "></span><a href="#&#x89C6;&#x56FE;-jackolantern"><b></b>&#x89C6;&#x56FE; :jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x89C6;&#x56FE;"><b></b>&#x521B;&#x5EFA;&#x89C6;&#x56FE;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x89C6;&#x56FE;"><b></b>&#x4F7F;&#x7528;&#x89C6;&#x56FE;</a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#x6570;&#x636E;"><b></b>&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#x6570;&#x636E;</a></li><li><span class="title-icon "></span><a href="#&#x4FEE;&#x6539;&#x89C6;&#x56FE;"><b></b>&#x4FEE;&#x6539;&#x89C6;&#x56FE;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x89C6;&#x56FE;&#x6570;&#x636E;"><b></b>&#x5220;&#x9664;&#x89C6;&#x56FE;&#x6570;&#x636E;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x89C6;&#x56FE;"><b></b>&#x5220;&#x9664;&#x89C6;&#x56FE;</a></li></ul><li><span class="title-icon "></span><a href="#&#x89E6;&#x53D1;&#x5668;-jackolantern"><b></b>&#x89E6;&#x53D1;&#x5668; :jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x89E6;&#x53D1;&#x5668;"><b></b>&#x521B;&#x5EFA;&#x89E6;&#x53D1;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x89E6;&#x53D1;&#x5668;"><b></b>&#x4F7F;&#x7528;&#x89E6;&#x53D1;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x89E6;&#x53D1;&#x5668;"><b></b>&#x5220;&#x9664;&#x89E6;&#x53D1;&#x5668;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;-jackolantern"><b></b>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B; :jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x6982;&#x5FF5;"><b></b>&#x6982;&#x5FF5;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x73B0;&#x6709;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><b></b>&#x67E5;&#x770B;&#x73B0;&#x6709;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><b></b>&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><b></b>&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x8C03;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><b></b>&#x8C03;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x51FD;&#x6570;-jackolantern"><b></b>&#x51FD;&#x6570; :jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;"><b></b>&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x8C03;&#x7528;&#x51FD;&#x6570;"><b></b>&#x8C03;&#x7528;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x51FD;&#x6570;"><b></b>&#x5220;&#x9664;&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E8B;&#x52A1;-jackolantern"><b></b>&#x4E8B;&#x52A1; :jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;&#x4E8B;&#x52A1;"><b></b>&#x4EC0;&#x4E48;&#x662F;&#x4E8B;&#x52A1;</a></li><li><span class="title-icon "></span><a href="#&#x4E8B;&#x7269;&#x7279;&#x6027;acid"><b></b>&#x4E8B;&#x7269;&#x7279;&#x6027;ACID</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;&#x64CD;&#x4F5C;"><b></b>&#x5B9E;&#x4F8B;&#x64CD;&#x4F5C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;&#x63A7;&#x5236;jackolantern"><b></b>&#x6D41;&#x7A0B;&#x63A7;&#x5236;:jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x6761;&#x4EF6;&#x8BED;&#x53E5;"><b></b>&#x6761;&#x4EF6;&#x8BED;&#x53E5;</a></li><li><span class="title-icon "></span><a href="#&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><b></b>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;</a></li></ul></ul></ul></div><a href="#mysql" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mysql"><a name="mysql" class="anchor-navigation-ex-anchor" href="#mysql"><i class="fa fa-link" aria-hidden="true"></i></a>MySQL</h1>
+<h2 id="&#x89C6;&#x56FE;-jackolantern"><a name="&#x89C6;&#x56FE;-jackolantern" class="anchor-navigation-ex-anchor" href="#&#x89C6;&#x56FE;-jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89C6;&#x56FE; :jack_o_lantern:</h2>
+<p>&#x89C6;&#x56FE;&#x662F;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x8868;&#xFF08;&#x975E;&#x771F;&#x5B9E;&#x5B58;&#x5728;&#xFF09;&#xFF0C;&#x5176;&#x672C;&#x8D28;&#x662F;&#x3010;&#x6839;&#x636E;SQL&#x8BED;&#x53E5;&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x5E76;&#x4E3A;&#x5176;&#x547D;&#x540D;&#x3011;&#xFF0C;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x65F6;&#x53EA;&#x9700;&#x4F7F;&#x7528;&#x3010;&#x540D;&#x79F0;&#x3011;&#x5373;&#x53EF;&#x83B7;&#x53D6;&#x7ED3;&#x679C;&#x96C6;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8BE5;&#x7ED3;&#x679C;&#x96C6;&#x5F53;&#x505A;&#x8868;&#x6765;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x89C6;&#x56FE;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x67E5;&#x8BE2;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x4E34;&#x65F6;&#x8868;&#x6458;&#x51FA;&#x6765;&#xFF0C;&#x7528;&#x89C6;&#x56FE;&#x53BB;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x6837;&#x4EE5;&#x540E;&#x518D;&#x60F3;&#x64CD;&#x4F5C;&#x8BE5;&#x4E34;&#x65F6;&#x8868;&#x7684;&#x6570;&#x636E;&#x65F6;&#x5C31;&#x65E0;&#x9700;&#x91CD;&#x5199;&#x590D;&#x6742;&#x7684;sql&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x53BB;&#x89C6;&#x56FE;&#x4E2D;&#x67E5;&#x627E;&#x5373;&#x53EF;&#xFF0C;&#x4F46;&#x89C6;&#x56FE;&#x6709;&#x660E;&#x663E;&#x5730;&#x6548;&#x7387;&#x95EE;&#x9898;&#xFF0C;&#x5E76;&#x4E14;&#x89C6;&#x56FE;&#x662F;&#x5B58;&#x653E;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x7684;sql&#x8FC7;&#x5206;&#x4F9D;&#x8D56;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x5373;&#x5F3A;&#x8026;&#x5408;&#xFF0C;&#x90A3;&#x5C31;&#x610F;&#x5473;&#x7740;&#x6269;&#x5C55;sql&#x6781;&#x4E3A;&#x4E0D;&#x4FBF;&#xFF0C;&#x56E0;&#x6B64;&#x5E76;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;</p>
+<p>&#x89C6;&#x56FE;&#x7684;&#x4F18;&#x70B9;&#xFF1A;</p>
+<p>&#x200B;    1&#x3001;&#x7B80;&#x5316;&#x8868;&#x4E4B;&#x95F4;&#x7684;&#x8054;&#x7ED3;&#xFF08;&#x628A;&#x8054;&#x7ED3;&#x5199;&#x5728;select&#x4E2D;&#xFF09;</p>
+<p>&#x200B;    2&#x3001;&#x9002;&#x5F53;&#x7684;&#x5229;&#x7528;&#x89C6;&#x56FE;&#x53EF;&#x4EE5;&#x66F4;&#x6E05;&#x6670;&#x5730;&#x8868;&#x8FBE;&#x67E5;&#x8BE2;</p>
+<p>&#x200B;    3&#x3001;&#x8FC7;&#x6EE4;&#x4E0D;&#x60F3;&#x8981;&#x7684;&#x6570;&#x636E;&#xFF08;select&#x90E8;&#x5206;&#xFF09;&#x89C6;&#x56FE;&#x80FD;&#x591F;&#x5BF9;&#x673A;&#x5BC6;&#x6570;&#x636E;&#x63D0;&#x4F9B;&#x5B89;&#x5168;&#x4FDD;&#x62A4;</p>
+<p>&#x200B;    4&#x3001;&#x4F7F;&#x7528;&#x89C6;&#x56FE;&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x503C;&#xFF0C;&#x5982;&#x6C47;&#x603B;&#x8FD9;&#x6837;&#x7684;&#x503C;</p>
+<h3 id="&#x521B;&#x5EFA;&#x89C6;&#x56FE;"><a name="&#x521B;&#x5EFA;&#x89C6;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x89C6;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x89C6;&#x56FE;</h3>
+<pre><code>&#x8BED;&#x6CD5;&#xFF1A;
+    CREATE VIEW &#x89C6;&#x56FE;&#x540D;&#x79F0; AS  SQL&#x8BED;&#x53E5;
+&#x5982;&#xFF1A;
+    create view &#x89C6;&#x56FE;&#x540D; as select &#x5B57;&#x6BB5; from &#x8868;&#x540D; where &#x6761;&#x4EF6;;
+&#x6CE8;&#x610F;&#xFF1A;
+1. &#x4F7F;&#x7528;&#x89C6;&#x56FE;&#x4EE5;&#x540E;&#x5C31;&#x65E0;&#x9700;&#x6BCF;&#x6B21;&#x90FD;&#x91CD;&#x5199;&#x5B50;&#x67E5;&#x8BE2;&#x7684;sql&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E48;&#x6548;&#x7387;&#x5E76;&#x4E0D;&#x9AD8;&#xFF0C;&#x8FD8;&#x4E0D;&#x5982;&#x6211;&#x4EEC;&#x5199;&#x5B50;&#x67E5;&#x8BE2;&#x7684;&#x6548;&#x7387;&#x9AD8;
+
+2. &#x800C;&#x4E14;&#x6709;&#x4E00;&#x4E2A;&#x81F4;&#x547D;&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x89C6;&#x56FE;&#x662F;&#x5B58;&#x653E;&#x5230;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;sql&#x8FC7;&#x5206;&#x4F9D;&#x8D56;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5B58;&#x653E;&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x90A3;&#x4E48;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x4E00;&#x65E6;sql&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4E14;&#x6D89;&#x53CA;&#x5230;&#x89C6;&#x56FE;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x53BB;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x800C;&#x901A;&#x5E38;&#x5728;&#x516C;&#x53F8;&#x4E2D;&#x6570;&#x636E;&#x5E93;&#x6709;&#x4E13;&#x95E8;&#x7684;DBA&#x8D1F;&#x8D23;&#xFF0C;&#x4F60;&#x8981;&#x60F3;&#x5B8C;&#x6210;&#x4FEE;&#x6539;&#xFF0C;&#x5FC5;&#x987B;&#x4ED8;&#x51FA;&#x5927;&#x91CF;&#x7684;&#x6C9F;&#x901A;&#x6210;&#x672C;DBA&#x53EF;&#x80FD;&#x624D;&#x4F1A;&#x5E2E;&#x4F60;&#x5B8C;&#x6210;&#x4FEE;&#x6539;&#xFF0C;&#x6781;&#x5176;&#x5730;&#x4E0D;&#x65B9;&#x4FBF;
+</code></pre><h3 id="&#x4F7F;&#x7528;&#x89C6;&#x56FE;"><a name="&#x4F7F;&#x7528;&#x89C6;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x89C6;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x89C6;&#x56FE;</h3>
+<pre><code>select * from &#x89C6;&#x56FE;&#x540D;&#x79F0;
+</code></pre><h3 id="&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#x6570;&#x636E;"><a name="&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#x6570;&#x636E;</h3>
+<pre><code>update &#x89C6;&#x56FE;&#x540D; set &#x65B0;&#x6570;&#x636E; where &#x6761;&#x4EF6;;
+insert into &#x89C6;&#x56FE;&#x540D; values(&#x6570;&#x636E;);
+ps&#xFF1A;
+    &#x65B0;&#x589E;&#x548C;&#x4FEE;&#x6539;&#x89C6;&#x56FE;&#x6570;&#x636E;&#xFF0C;&#x539F;&#x59CB;&#x8868;&#x4E5F;&#x4F1A;&#x8DDF;&#x7740;&#x88AB;&#x4FEE;&#x6539;
+    &#x6211;&#x4EEC;&#x4E0D;&#x5E94;&#x8BE5;&#x4FEE;&#x6539;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x800C;&#x4E14;&#x5728;&#x6D89;&#x53CA;&#x591A;&#x4E2A;&#x8868;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x6839;&#x672C;&#x65E0;&#x6CD5;&#x4FEE;&#x6539;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#x7684;
+</code></pre><h3 id="&#x4FEE;&#x6539;&#x89C6;&#x56FE;"><a name="&#x4FEE;&#x6539;&#x89C6;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;&#x89C6;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x89C6;&#x56FE;</h3>
+<pre><code>ALTER VIEW &#x89C6;&#x56FE;&#x540D;&#x79F0; AS SQL&#x8BED;&#x53E5;
+</code></pre><h3 id="&#x5220;&#x9664;&#x89C6;&#x56FE;&#x6570;&#x636E;"><a name="&#x5220;&#x9664;&#x89C6;&#x56FE;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x89C6;&#x56FE;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x89C6;&#x56FE;&#x6570;&#x636E;</h3>
+<pre><code>DELETE from &#x89C6;&#x56FE;&#x540D; where &#x6761;&#x4EF6;;
+</code></pre><h3 id="&#x5220;&#x9664;&#x89C6;&#x56FE;"><a name="&#x5220;&#x9664;&#x89C6;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x89C6;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x89C6;&#x56FE;</h3>
+<pre><code>drop view &#x89C6;&#x56FE;&#x540D;;
+</code></pre><h2 id="&#x89E6;&#x53D1;&#x5668;-jackolantern"><a name="&#x89E6;&#x53D1;&#x5668;-jackolantern" class="anchor-navigation-ex-anchor" href="#&#x89E6;&#x53D1;&#x5668;-jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E6;&#x53D1;&#x5668; :jack_o_lantern:</h2>
+<p>&#x89E6;&#x53D1;&#x5668;(trigger)&#xFF1A;&#x76D1;&#x89C6;&#x67D0;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x5E76;&#x89E6;&#x53D1;&#x67D0;&#x79CD;&#x64CD;&#x4F5C;</p>
+<p>&#x89E6;&#x53D1;&#x5668;&#x521B;&#x5EFA;&#x8BED;&#x6CD5;&#x56DB;&#x8981;&#x7D20;&#xFF1A;1.&#x76D1;&#x89C6;&#x5730;&#x70B9;(table)</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;2.&#x76D1;&#x89C6;&#x4E8B;&#x4EF6;(insert/update/delete)</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;3.&#x89E6;&#x53D1;&#x65F6;&#x95F4;(after/before)</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;4.&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;(insert/update/delete)</p>
+<p>&#x4F7F;&#x7528;&#x89E6;&#x53D1;&#x5668;&#x53EF;&#x4EE5;&#x5B9A;&#x5236;&#x7528;&#x6237;&#x5BF9;&#x8868;&#x8FDB;&#x884C;&#x3010;&#x589E;&#x3001;&#x5220;&#x3001;&#x6539;&#x3011;&#x64CD;&#x4F5C;&#x65F6;&#x524D;&#x540E;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x6CE8;&#x610F;&#xFF1A;&#x6CA1;&#x6709;&#x67E5;&#x8BE2;</p>
+<h3 id="&#x521B;&#x5EFA;&#x89E6;&#x53D1;&#x5668;"><a name="&#x521B;&#x5EFA;&#x89E6;&#x53D1;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x89E6;&#x53D1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x89E6;&#x53D1;&#x5668;</h3>
+<pre><code>create trigger triggerName  after/before  insert/update/delete
+     on &#x8868;&#x540D; for each row       --&#x8FD9;&#x53E5;&#x8BDD;&#x662F;&#x56FA;&#x5B9A;&#x7684;
+
+begin
+
+     &#x9700;&#x8981;&#x6267;&#x884C;&#x7684;sql&#x8BED;&#x53E5;
+
+end
+
+&#x6CE8;&#x610F;&#xFF1A;
+    1.after/before: &#x53EA;&#x80FD;&#x9009;&#x4E00;&#x4E2A; ,after &#x8868;&#x793A; &#x540E;&#x7F6E;&#x89E6;&#x53D1;, before &#x8868;&#x793A;&#x524D;&#x7F6E;&#x89E6;&#x53D1;
+    2.insert/update/delete:&#x53EA;&#x80FD;&#x9009;&#x4E00;&#x4E2A;
+&#x7279;&#x522B;&#xFF1A;NEW&#x8868;&#x793A;&#x5373;&#x5C06;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#x884C;&#xFF0C;OLD&#x8868;&#x793A;&#x5373;&#x5C06;&#x5220;&#x9664;&#x7684;&#x6570;&#x636E;&#x884C;
+</code></pre><h3 id="&#x4F7F;&#x7528;&#x89E6;&#x53D1;&#x5668;"><a name="&#x4F7F;&#x7528;&#x89E6;&#x53D1;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x89E6;&#x53D1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x89E6;&#x53D1;&#x5668;</h3>
+<p>&#x89E6;&#x53D1;&#x5668;&#x65E0;&#x6CD5;&#x7531;&#x7528;&#x6237;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF0C;&#x800C;&#x662F;&#x7531;&#x4E8E;&#x5BF9;&#x8868;&#x7684;&#x3010;&#x589E;/&#x5220;/&#x6539;&#x3011;&#x64CD;&#x4F5C;&#x88AB;&#x52A8;&#x5F15;&#x53D1;&#x7684;</p>
+<h3 id="&#x5220;&#x9664;&#x89E6;&#x53D1;&#x5668;"><a name="&#x5220;&#x9664;&#x89E6;&#x53D1;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x89E6;&#x53D1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x89E6;&#x53D1;&#x5668;</h3>
+<pre><code>drop trigger &#x89E6;&#x53D1;&#x5668;&#x540D;;
+</code></pre><h2 id="&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;-jackolantern"><a name="&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;-jackolantern" class="anchor-navigation-ex-anchor" href="#&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;-jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B; :jack_o_lantern:</h2>
+<h3 id="&#x6982;&#x5FF5;"><a name="&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6982;&#x5FF5;</h3>
+<p>&#x4EC0;&#x4E48;&#x662F;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#xFF1A;&#x7C7B;&#x4F3C;&#x4E8E;&#x51FD;&#x6570;(&#x65B9;&#x6CD5;),&#x7B80;&#x5355;&#x7684;&#x8BF4;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x662F;&#x4E3A;&#x4E86;&#x5B8C;&#x6210;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x529F;&#x80FD;&#x800C;&#x7F16;&#x5199;&#x7684;&#x8BED;&#x53E5;&#x96C6;&#x5408;&#xFF0C;&#x8BE5;&#x8BED;&#x53E5;&#x96C6;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;SQL&#x8BED;&#x53E5;&#xFF08;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;&#xFF09;&#x3001;&#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x548C;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x7B49;&#xFF0C;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x5B58;&#x653E;&#x4E8E;MySQL&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x5B83;&#x7684;&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x5176;&#x5185;&#x90E8;&#x7684;&#x4E00;&#x5806;sql</p>
+<p>&#x4F7F;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x7684;&#x4F18;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x589E;&#x5F3A;&#x4E86;SQL&#x8BED;&#x8A00;&#x7075;&#x6D3B;&#x6027;&#x3002;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x63A7;&#x5236;&#x8BED;&#x53E5;&#x7F16;&#x5199;&#xFF0C;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x590D;&#x6742;&#x7684;&#x5224;&#x65AD;&#x548C;&#x8F83;&#x590D;&#x6742;&#x7684;&#x8FD0;&#x7B97;&#xFF0C;&#x6709;&#x5F88;&#x5F3A;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF1B;</li>
+<li>&#x51CF;&#x5C11;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;&#xFF0C;&#x964D;&#x4F4E;&#x4E86;&#x7F51;&#x7EDC;&#x8D1F;&#x8F7D;&#x3002;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x5728;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x521B;&#x5EFA;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528;&#x8BE5;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x5373;&#x53EF;&#xFF0C;&#x800C;&#x4F20;&#x7EDF;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x5C06;&#x5927;&#x91CF;&#x7684;SQL&#x8BED;&#x53E5;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x53D1;&#x9001;&#x81F3;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7136;&#x540E;&#x518D;&#x6267;&#x884C;&#xFF1B;</li>
+<li>&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x53EA;&#x5728;&#x521B;&#x9020;&#x65F6;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#xFF0C;&#x4EE5;&#x540E;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x90FD;&#x4E0D;&#x9700;&#x518D;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#xFF0C;&#x800C;&#x4E00;&#x822C;SQL&#x8BED;&#x53E5;&#x6BCF;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x5C31;&#x7F16;&#x8BD1;&#x4E00;&#x6B21;,&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x53EF;&#x63D0;&#x9AD8;&#x6570;&#x636E;&#x5E93;&#x6267;&#x884C;&#x901F;&#x5EA6;&#x3002;</li>
+<li>&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x901A;&#x8FC7;&#x8BBE;&#x5B9A;&#x67D0;&#x4E00;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x7684;&#x6743;&#x9650;&#x5B9E;&#x73B0;&#x5BF9;&#x76F8;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x907F;&#x514D;&#x4E86;&#x975E;&#x6388;&#x6743;&#x7528;&#x6237;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E86;&#x6570;&#x636E;&#x7684;&#x5B89;&#x5168;</li>
+<li>&#x7528;&#x4E8E;&#x66FF;&#x4EE3;&#x7A0B;&#x5E8F;&#x5199;&#x7684;SQL&#x8BED;&#x53E5;&#xFF0C;&#x5B9E;&#x73B0;&#x7A0B;&#x5E8F;&#x4E0E;SQL&#x89E3;&#x8026;</li>
+</ul>
+<p>&#x4F7F;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x7684;&#x7F3A;&#x70B9;&#xFF1A;</p>
+<p>&#x200B;    &#x7A0B;&#x5E8F;&#x5458;&#x6269;&#x5C55;&#x529F;&#x80FD;&#x4E0D;&#x65B9;&#x4FBF;</p>
+<p>&#x7A0B;&#x5E8F;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;</p>
+<pre><code>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;
+    MySQL&#xFF1A;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;
+    &#x7A0B;&#x5E8F;&#xFF1A;&#x8C03;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;
+
+&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;
+    MySQL&#xFF1A;
+    &#x7A0B;&#x5E8F;&#xFF1A;&#x7EAF;SQL&#x8BED;&#x53E5;
+
+&#x65B9;&#x5F0F;&#x4E09;&#xFF1A;
+    MySQL:
+    &#x7A0B;&#x5E8F;&#xFF1A;&#x7C7B;&#x548C;&#x5BF9;&#x8C61;&#xFF0C;&#x5373;ORM&#xFF08;&#x672C;&#x8D28;&#x8FD8;&#x662F;&#x7EAF;SQL&#x8BED;&#x53E5;&#xFF09;
+</code></pre><h3 id="&#x67E5;&#x770B;&#x73B0;&#x6709;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><a name="&#x67E5;&#x770B;&#x73B0;&#x6709;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x73B0;&#x6709;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x73B0;&#x6709;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</h3>
+<pre><code>show procedure status;
+</code></pre><h3 id="&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><a name="&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</h3>
+<pre><code>drop procedure &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x540D;&#x79F0;;
+</code></pre><h3 id="&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><a name="&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</h3>
+<pre><code>&#x5BF9;&#x4E8E;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x53C2;&#x6570;&#xFF0C;&#x5176;&#x53C2;&#x6570;&#x6709;&#x4E09;&#x7C7B;&#xFF1A;
+
+in          &#x4EC5;&#x7528;&#x4E8E;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7528;
+out         &#x4EC5;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x503C;&#x7528;
+inout       &#x65E2;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x53C8;&#x53EF;&#x4EE5;&#x5F53;&#x4F5C;&#x8FD4;&#x56DE;&#x503C;
+
+
+create procedure &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x540D;&#x79F0;(
+    in/out/inout &#x53C2;&#x6570;&#x540D; &#x53C2;&#x6570;&#x7C7B;&#x578B;,
+    in/out/inout &#x53C2;&#x6570;&#x540D; &#x53C2;&#x6570;&#x7C7B;&#x578B;
+)
+BEGIN
+
+    &#x9700;&#x8981;&#x6267;&#x884C;&#x7684;SQL&#x8BED;&#x53E5;
+
+END
+</code></pre><h3 id="&#x8C03;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><a name="&#x8C03;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x8C03;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C03;&#x7528;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</h3>
+<pre><code>call &#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x540D;&#x79F0;(&#x53C2;&#x6570;1 &#x53C2;&#x6570;&#x7C7B;&#x578B;,&#x53C2;&#x6570;2 &#x53C2;&#x6570;&#x7C7B;&#x578B;);
+</code></pre><h2 id="&#x51FD;&#x6570;-jackolantern"><a name="&#x51FD;&#x6570;-jackolantern" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6570;-jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570; :jack_o_lantern:</h2>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;"><a name="&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;</h3>
+<pre><code>create FUNCTION &#x51FD;&#x6570;&#x540D;(&#x53C2;&#x6570;1 &#x53C2;&#x6570;&#x7C7B;&#x578B;,&#x53C2;&#x6570;2 &#x53C2;&#x6570;&#x7C7B;&#x578B;)
+
+returns &#x53C2;&#x6570;&#x7C7B;&#x578B; //&#x8BBE;&#x7F6E;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;
+
+BEGIN
+
+    DECLARE sum int default 0;
+    set sum = i1+i2;
+    return(sum); //&#x8FD4;&#x56DE;&#x7ED3;&#x679C;
+
+end
+</code></pre><h3 id="&#x8C03;&#x7528;&#x51FD;&#x6570;"><a name="&#x8C03;&#x7528;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x8C03;&#x7528;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C03;&#x7528;&#x51FD;&#x6570;</h3>
+<pre><code>&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;
+select &#x51FD;&#x6570;&#x540D;(&#x53C2;&#x6570;1,&#x53C2;&#x6570;2);
+
+&#x5728;sql&#x8BED;&#x53E5;&#x4E2D;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;
+select &#x51FD;&#x6570;&#x540D;(&#x53C2;&#x6570;1,&#x53C2;&#x6570;2),&#x8868;&#x5B57;&#x6BB5; from &#x8868;&#x540D;
+</code></pre><h3 id="&#x5220;&#x9664;&#x51FD;&#x6570;"><a name="&#x5220;&#x9664;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x51FD;&#x6570;</h3>
+<pre><code>drop function &#x51FD;&#x6570;&#x540D;;
+</code></pre><h2 id="&#x4E8B;&#x52A1;-jackolantern"><a name="&#x4E8B;&#x52A1;-jackolantern" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x52A1;-jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8B;&#x52A1; :jack_o_lantern:</h2>
+<h3 id="&#x4EC0;&#x4E48;&#x662F;&#x4E8B;&#x52A1;"><a name="&#x4EC0;&#x4E48;&#x662F;&#x4E8B;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;&#x4E8B;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EC0;&#x4E48;&#x662F;&#x4E8B;&#x52A1;</h3>
+<p>&#x200B;    &#x4E8B;&#x52A1;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x4E00;&#x7CFB;&#x5217;&#x4E25;&#x5BC6;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x5FC5;&#x987B;&#x6210;&#x529F;&#x5B8C;&#x6210;&#xFF0C;&#x5426;&#x5219;&#x5728;&#x6BCF;&#x4E2A;&#x64CD;&#x4F5C;&#x4E2D;&#x6240;&#x4F5C;&#x7684;&#x6240;&#x6709;&#x66F4;&#x6539;&#x90FD;&#x4F1A;&#x88AB;&#x64A4;&#x6D88;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x4E8B;&#x52A1;&#x5177;&#x6709;&#x539F;&#x5B50;&#x6027;&#xFF0C;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x64CD;&#x4F5C;&#x8981;&#x4E48;&#x5168;&#x90E8;&#x6210;&#x529F;&#xFF0C;&#x8981;&#x4E48;&#x4E00;&#x4E2A;&#x90FD;&#x4E0D;&#x505A;&#x3002; 
+&#x200B;    &#x4E8B;&#x52A1;&#x7684;&#x7ED3;&#x675F;&#x6709;&#x4E24;&#x79CD;&#xFF0C;&#x5F53;&#x4E8B;&#x52A1;&#x4E2D;&#x7684;&#x6240;&#x4EE5;&#x6B65;&#x9AA4;&#x5168;&#x90E8;&#x6210;&#x529F;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x4E8B;&#x52A1;&#x63D0;&#x4EA4;&#x3002;&#x5982;&#x679C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x6B65;&#x9AA4;&#x5931;&#x8D25;&#xFF0C;&#x5C06;&#x53D1;&#x751F;&#x56DE;&#x6EDA;&#x64CD;&#x4F5C;&#xFF0C;&#x64A4;&#x6D88;&#x4E4B;&#x524D;&#x5230;&#x4E8B;&#x52A1;&#x5F00;&#x59CB;&#x65F6;&#x7684;&#x6240;&#x4EE5;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x603B;&#x7ED3;:&#x4E8B;&#x52A1;&#x5C31;&#x662F;&#x4E00;&#x7EC4;&#x64CD;&#x4F5C;,&#x8981;&#x4E48;&#x5168;&#x90E8;&#x5B8C;&#x6210;,&#x8981;&#x4E48;&#x5168;&#x90E8;&#x5931;&#x8D25;!</p>
+<h3 id="&#x4E8B;&#x7269;&#x7279;&#x6027;acid"><a name="&#x4E8B;&#x7269;&#x7279;&#x6027;acid" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x7269;&#x7279;&#x6027;acid"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8B;&#x7269;&#x7279;&#x6027;ACID</h3>
+<p>&#x3000;&#x3000;&#x4E8B;&#x52A1;&#x5177;&#x6709;&#x56DB;&#x4E2A;&#x7279;&#x5F81;&#xFF1A;&#x539F;&#x5B50;&#x6027;&#xFF08; Atomicity &#xFF09;&#x3001;&#x4E00;&#x81F4;&#x6027;&#xFF08; Consistency &#xFF09;&#x3001;&#x9694;&#x79BB;&#x6027;&#xFF08; Isolation &#xFF09;&#x548C;&#x6301;&#x7EED;&#x6027;&#xFF08; Durability &#xFF09;&#x3002;&#x8FD9;&#x56DB;&#x4E2A;&#x7279;&#x6027;&#x7B80;&#x79F0;&#x4E3A; ACID &#x7279;&#x6027;&#x3002; </p>
+<p>&#x3000;&#x3000;1 &#x3001;&#x539F;&#x5B50;&#x6027;  (&#x4E8B;&#x7269;&#x5185;&#x7684;&#x64CD;&#x4F5C;,&#x8981;&#x4E48;&#x5168;&#x90E8;&#x6210;&#x529F;,&#x8981;&#x4E48;&#x5168;&#x90E8;&#x5931;&#x8D25;)
+&#x200B;    &#x4E8B;&#x52A1;&#x662F;&#x6570;&#x636E;&#x5E93;&#x7684;&#x903B;&#x8F91;&#x5DE5;&#x4F5C;&#x5355;&#x4F4D;&#xFF0C;&#x4E8B;&#x52A1;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x5404;&#x64CD;&#x4F5C;&#x8981;&#x4E48;&#x90FD;&#x505A;&#xFF0C;&#x8981;&#x4E48;&#x90FD;&#x4E0D;&#x505A;</p>
+<p>&#x3000;&#x3000;2 &#x3001;&#x4E00;&#x81F4;&#x6027; (&#x4E8B;&#x7269;&#x4E4B;&#x524D;&#x4E4B;&#x540E;,&#x524D;&#x540E;&#x6570;&#x636E;&#x7684;&#x4E00;&#x81F4;&#x6027;)
+&#x200B;    &#x4E8B;&#x52A1;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x5FC5;&#x987B;&#x662F;&#x4F7F;&#x6570;&#x636E;&#x5E93;&#x4ECE;&#x4E00;&#x4E2A;&#x4E00;&#x81F4;&#x6027;&#x72B6;&#x6001;&#x53D8;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x4E00;&#x81F4;&#x6027;&#x72B6;&#x6001;&#x3002;&#x56E0;&#x6B64;&#x5F53;&#x6570;&#x636E;&#x5E93;&#x53EA;&#x5305;&#x542B;&#x6210;&#x529F;&#x4E8B;&#x52A1;&#x63D0;&#x4EA4;&#x7684;&#x7ED3;&#x679C;&#x65F6;&#xFF0C;&#x5C31;&#x8BF4;&#x6570;&#x636E;&#x5E93;&#x5904;&#x4E8E;&#x4E00;&#x81F4;&#x6027;&#x72B6;&#x6001;&#x3000;&#x5982;&#x679C;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF; &#x8FD0;&#x884C;&#x4E2D;&#x53D1;&#x751F;&#x6545;&#x969C;&#xFF0C;&#x6709;&#x4E9B;&#x4E8B;&#x52A1;&#x5C1A;&#x672A;&#x5B8C;&#x6210;&#x5C31;&#x88AB;&#x8FEB;&#x4E2D;&#x65AD;&#xFF0C;&#x8FD9;&#x4E9B;&#x672A;&#x5B8C;&#x6210;&#x4E8B;&#x52A1;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x6240;&#x505A;&#x7684;&#x4FEE;&#x6539;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x5DF2;&#x5199;&#x5165;&#x7269;&#x7406;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x8FD9;&#x65F6;&#x6570;&#x636E;&#x5E93;&#x5C31;&#x5904;&#x4E8E;&#x4E00;&#x79CD;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x662F; &#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x72B6;&#x6001;&#x3002; </p>
+<p>&#x3000;&#x3000;3 &#x3001;&#x9694;&#x79BB;&#x6027;(&#x591A;&#x4E2A;&#x4E8B;&#x7269;&#x65F6;,&#x76F8;&#x4E92;&#x4E0D;&#x80FD;&#x5E72;&#x6270;) 
+&#x200B;    &#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x7684;&#x6267;&#x884C;&#x4E0D;&#x80FD;&#x88AB;&#x5176;&#x5B83;&#x4E8B;&#x52A1;&#x5E72;&#x6270;&#x3002;&#x5373;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x5185;&#x90E8;&#x7684;&#x64CD;&#x4F5C;&#x53CA;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x5176;&#x5B83;&#x5E76;&#x53D1;&#x4E8B;&#x52A1;&#x662F;&#x9694;&#x79BB;&#x7684;&#xFF0C;&#x5E76;&#x53D1;&#x6267;&#x884C;&#x7684;&#x5404;&#x4E2A;&#x4E8B;&#x52A1;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x4E92;&#x76F8;&#x5E72;&#x6270;&#x3002;</p>
+<p>&#x3000;   4 &#x3001;&#x6301;&#x7EED;&#x6027;(&#x4E00;&#x65E6;&#x4E8B;&#x7269;&#x63D0;&#x4EA4;(commit)&#x4E4B;&#x540E;,&#x662F;&#x4E0D;&#x53EF;&#x56DE;&#x6EDA;&#x7684;) 
+&#x200B;    &#x6301;&#x7EED;&#x6027;&#x4E5F;&#x79F0;&#x6C38;&#x4E45;&#x6027;&#xFF0C;&#x6307;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E00;&#x65E6;&#x63D0;&#x4EA4;&#xFF0C;&#x5B83;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7684;&#x6539;&#x53D8;&#x5C31;&#x5E94;&#x8BE5;&#x662F;&#x6C38;&#x4E45;&#x6027;&#x7684;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x5176;&#x5B83;&#x64CD;&#x4F5C;&#x6216;&#x6545;&#x969C;&#x4E0D;&#x5E94;&#x8BE5;&#x5BF9;&#x5176;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x6709;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x3002; </p>
+<h3 id="&#x5B9E;&#x4F8B;&#x64CD;&#x4F5C;"><a name="&#x5B9E;&#x4F8B;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#x64CD;&#x4F5C;</h3>
+<p>&#x200B;    1.&#x5F00;&#x542F;&#x4E8B;&#x7269;  start transaction</p>
+<p>&#x200B;    2.&#x63D0;&#x4EA4;&#x4E8B;&#x7269;   commit</p>
+<p>&#x200B;    3.&#x56DE;&#x6EDA;&#x4E8B;&#x7269;   rollback</p>
+<pre><code>create table user(
+id int primary key auto_increment,
+name char(32),
+balance int
+);
+
+insert into user(name,balance)
+values
+(&apos;w&apos;,1000),
+(&apos;l&apos;,1000),
+(&apos;y&apos;,1000);
+
+#&#x539F;&#x5B50;&#x64CD;&#x4F5C;
+start transaction;
+update user set balance=900 where name=&apos;w&apos;; # w&#x652F;&#x4ED8;100&#x5143;
+update user set balance=1010 where name=&apos;l&apos;; # l&#x62FF;&#x8D70;10&#x5143;
+update user set balance=1090 where name=&apos;y&apos;; # y&#x5BB6;&#x62FF;&#x5230;90&#x5143;
+commit;
+
+#&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF0C;&#x56DE;&#x6EDA;&#x5230;&#x521D;&#x59CB;&#x72B6;&#x6001;
+start transaction;
+update user set balance=900 where name=&apos;w&apos;; # w&#x652F;&#x4ED8;100&#x5143;
+update user set balance=1010 where name=&apos;l&apos;; # l&#x62FF;&#x8D70;10&#x5143;
+uppdate user set balance=1090 where name=&apos;y&apos;; # y&#x62FF;&#x5230;90&#x5143;,&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x6CA1;&#x6709;&#x62FF;&#x5230;
+rollback;
+commit;
+
+mysql&gt; select * from user;
++----+------+---------+
+| id | name | balance |
++----+------+---------+
+|  1 |  w   |    1000 |
+|  2 |  l   |    1000 |
+|  3 |  y   |    1000 |
++----+------+---------+
+3 rows in set (0.00 sec)
+</code></pre><h2 id="&#x6D41;&#x7A0B;&#x63A7;&#x5236;jackolantern"><a name="&#x6D41;&#x7A0B;&#x63A7;&#x5236;jackolantern" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x7A0B;&#x63A7;&#x5236;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D41;&#x7A0B;&#x63A7;&#x5236;:jack_o_lantern:</h2>
+<h3 id="&#x6761;&#x4EF6;&#x8BED;&#x53E5;"><a name="&#x6761;&#x4EF6;&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#&#x6761;&#x4EF6;&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6761;&#x4EF6;&#x8BED;&#x53E5;</h3>
+<pre><code>&#x590D;&#x5236;&#x4EE3;&#x7801;
+delimiter //
+CREATE PROCEDURE proc_if ()
+BEGIN
+
+    declare i int default 0;
+    if i = 1 THEN
+        SELECT 1;
+    ELSEIF i = 2 THEN
+        SELECT 2;
+    ELSE
+        SELECT 7;
+    END IF;
+
+END //
+delimiter ;
+</code></pre><h3 id="&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><a name="&#x5FAA;&#x73AF;&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;</h3>
+<pre><code>delimiter //
+CREATE PROCEDURE proc_while ()
+BEGIN
+
+    DECLARE num INT ;
+    SET num = 0 ;
+    WHILE num &lt; 10 DO
+        SELECT
+            num ;
+        SET num = num + 1 ;
+    END WHILE ;
+
+END //
+delimiter ;
+</code></pre><p>repeat&#x5FAA;&#x73AF;</p>
+<pre><code>delimiter //
+CREATE PROCEDURE proc_repeat ()
+BEGIN
+
+    DECLARE i INT ;
+    SET i = 0 ;
+    repeat
+        select i;
+        set i = i + 1;
+        until i &gt;= 5
+    end repeat;
+
+END //
+delimiter ;
+</code></pre><p>loop</p>
+<pre><code>BEGIN
+
+    declare i int default 0;
+    loop_label: loop
+
+        set i=i+1;
+        if i&lt;8 then
+            iterate loop_label;
+        end if;
+        if i&gt;=10 then
+            leave loop_label;
+        end if;
+        select i;
+    end loop loop_label;
+
+END
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02-MySQL之基本操作.html" class="navigation navigation-prev " aria-label="Previous page: MySQL之基本操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04-MySQL之索引.html" class="navigation navigation-next " aria-label="Next page: MySQL之索引">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MySQL之视图","level":"1.5.3","depth":2,"next":{"title":"MySQL之索引","level":"1.5.4","depth":2,"path":"MySQL/04-MySQL之索引.md","ref":"MySQL/04-MySQL之索引.md","articles":[]},"previous":{"title":"MySQL之基本操作","level":"1.5.2","depth":2,"path":"MySQL/02-MySQL之基本操作.md","ref":"MySQL/02-MySQL之基本操作.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","-lunr","-search","search-plus","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"toggle-chapters":{},"splitter":{},"search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Poppy","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"study-notes","extension":null},"file":{"path":"MySQL/03-MySQL之视图.md","mtime":"2018-10-18T09:22:29.228Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-18T09:23:40.380Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

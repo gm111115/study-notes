@@ -1,0 +1,819 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MySQL之基本操作 · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Poppy">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03-MySQL之视图.html" />
+    
+    
+    <link rel="prev" href="01-MySQL之概述.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Poppy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Django/">
+            
+                <a href="../Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Flask/">
+            
+                <a href="../Flask/">
+            
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="01-MySQL之概述.html">
+            
+                <a href="01-MySQL之概述.html">
+            
+                    
+                    MySQL之概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="02-MySQL之基本操作.html">
+            
+                <a href="02-MySQL之基本操作.html">
+            
+                    
+                    MySQL之基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="03-MySQL之视图.html">
+            
+                <a href="03-MySQL之视图.html">
+            
+                    
+                    MySQL之视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="04-MySQL之索引.html">
+            
+                <a href="04-MySQL之索引.html">
+            
+                    
+                    MySQL之索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Python/01-Basic Data Type.html">
+            
+                <a href="../Python/01-Basic Data Type.html">
+            
+                    
+                    Basic Data Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Python/02-File Operations.html">
+            
+                <a href="../Python/02-File Operations.html">
+            
+                    
+                    File Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Python/03-Function.html">
+            
+                <a href="../Python/03-Function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Python/04-Function Advanced.html">
+            
+                <a href="../Python/04-Function Advanced.html">
+            
+                    
+                    Function Advanced
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Python/05-Recursion.html">
+            
+                <a href="../Python/05-Recursion.html">
+            
+                    
+                    Recursion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Python/06-Decorator.html">
+            
+                <a href="../Python/06-Decorator.html">
+            
+                    
+                    Decorator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Python/07-Object-Oriented.html">
+            
+                <a href="../Python/07-Object-Oriented.html">
+            
+                    
+                    Object-Oriented
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Python/08-Object-Oriented Advanced.html">
+            
+                <a href="../Python/08-Object-Oriented Advanced.html">
+            
+                    
+                    Object-Oriented Advanced
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../Python/README .html">
+            
+                <a href="../Python/README .html">
+            
+                    
+                    README 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Socket/">
+            
+                <a href="../Socket/">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Socket/01-Socket Introduce.html">
+            
+                <a href="../Socket/01-Socket Introduce.html">
+            
+                    
+                    Socket Introduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Web/">
+            
+                <a href="../Web/">
+            
+                    
+                    Web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Web/01-HTML.html">
+            
+                <a href="../Web/01-HTML.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Web/02-CSS.html">
+            
+                <a href="../Web/02-CSS.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Web/03-JavaScript.html">
+            
+                <a href="../Web/03-JavaScript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Web/04-BOM And DOM.html">
+            
+                <a href="../Web/04-BOM And DOM.html">
+            
+                    
+                    BOM And DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MySQL之基本操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mysql"><b></b>MySQL</a></li><ul><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x53CA;&#x6743;&#x9650;&#x64CD;&#x4F5C;-jackolantern"><b></b>&#x7528;&#x6237;&#x53CA;&#x6743;&#x9650;&#x64CD;&#x4F5C; :jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x64CD;&#x4F5C;"><b></b>&#x7528;&#x6237;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x6388;&#x6743;"><b></b>&#x7528;&#x6237;&#x6388;&#x6743;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5E93;&#x64CD;&#x4F5C;-jackolantern"><b></b>&#x5E93;&#x64CD;&#x4F5C; :jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x5E93;"><b></b>&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x5E93;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;"><b></b>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8868;&#x64CD;&#x4F5C;-jackolantern"><b></b>&#x8868;&#x64CD;&#x4F5C; :jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x8868;&#x4ECB;&#x7ECD;"><b></b>&#x8868;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x8868;"><b></b>&#x521B;&#x5EFA;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x4FEE;&#x6539;&#x8868;"><b></b>&#x4FEE;&#x6539;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x590D;&#x5236;&#x8868;"><b></b>&#x590D;&#x5236;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x8868;"><b></b>&#x67E5;&#x770B;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x8868;"><b></b>&#x5220;&#x9664;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x6E05;&#x7A7A;&#x8868;"><b></b>&#x6E05;&#x7A7A;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x91CD;&#x547D;&#x540D;&#x8868;"><b></b>&#x91CD;&#x547D;&#x540D;&#x8868;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x64CD;&#x4F5C;-jackolantern"><b></b>&#x6570;&#x636E;&#x64CD;&#x4F5C; :jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x65B0;&#x589E;"><b></b>&#x65B0;&#x589E;</a></li><li><span class="title-icon "></span><a href="#&#x4FEE;&#x6539;"><b></b>&#x4FEE;&#x6539;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;"><b></b>&#x5220;&#x9664;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x8BE2;"><b></b>&#x67E5;&#x8BE2;</a></li></ul></ul></ul></div><a href="#mysql" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mysql"><a name="mysql" class="anchor-navigation-ex-anchor" href="#mysql"><i class="fa fa-link" aria-hidden="true"></i></a>MySQL</h1>
+<h2 id="&#x7528;&#x6237;&#x53CA;&#x6743;&#x9650;&#x64CD;&#x4F5C;-jackolantern"><a name="&#x7528;&#x6237;&#x53CA;&#x6743;&#x9650;&#x64CD;&#x4F5C;-jackolantern" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x53CA;&#x6743;&#x9650;&#x64CD;&#x4F5C;-jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x53CA;&#x6743;&#x9650;&#x64CD;&#x4F5C; :jack_o_lantern:</h2>
+<h3 id="&#x7528;&#x6237;&#x64CD;&#x4F5C;"><a name="&#x7528;&#x6237;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x64CD;&#x4F5C;</h3>
+<pre><code>&#x66F4;&#x65B0;root &#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;
+set password for &#x2018;root&#x2019;@&#x2019;localhost&#x2019; = password(&#x2018;&#x65B0;&#x5BC6;&#x7801;&#x2019;)
+ps&#xFF1A;&#x7528;SET PASSWORD&#x547D;&#x4EE4;&#xFF0C;&#x6B64;&#x79CD;&#x65B9;&#x5F0F;&#x9002;&#x7528;&#x4E8E;&#x5F53;&#x524D;root&#x7528;&#x6237;&#x6CA1;&#x6709;&#x5BC6;&#x7801;&#x7684;&#x60C5;&#x51B5;
+UPDATE user SET Password = PASSWORD(&apos;newpass&apos;) WHERE user = &apos;root&apos;;
+ps&#xFF1A;&#x7528;UPDATE&#x76F4;&#x63A5;&#x7F16;&#x8F91;user&#x8868;&#xFF0C;&#x6B64;&#x79CD;&#x65B9;&#x5F0F;&#x4E0D;&#x7BA1;&#x6709;&#x6CA1;&#x6709;&#x5BC6;&#x7801;&#x90FD;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;
+&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7528;&#x6237;,mysql&#x6388;&#x6743;&#x7528;&#x6237;&#x4EE5;&#x6307;&#x5B9A;IP&#x767B;&#x5F55;
+create user &#x2018;&#x7528;&#x6237;&#x540D;&#x2019;@&#x2019;192.168.1.1&#x2019; identified by &#x2018;&#x5BC6;&#x7801;&#x2019;
+ps:&#x6307;&#x5B9A;&#x56FA;&#x5B9A;IP&#x8BBF;&#x95EE;
+create user &#x2018;&#x7528;&#x6237;&#x540D;&#x2019;@&#x2019;192.168.1.%&#x2019; identified by &#x2018;&#x5BC6;&#x7801;&#x2019;
+ps:&#x524D;&#x9762;&#x4E09;&#x4F4D;IP&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x5373;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;
+
+create user &#x2018;&#x7528;&#x6237;&#x540D;&#x2019;@&#x2019;%&#x2019; identified by &#x2018;&#x5BC6;&#x7801;&#x2019;
+ps:&#x6CA1;&#x6709;IP&#x9650;&#x5236;,%&#x8868;&#x793A;&#x901A;&#x914D;&#x6240;&#x6709;IP
+
+&#x5220;&#x9664;&#x7528;&#x6237;
+drop user &apos;&#x7528;&#x6237;&#x540D;&apos;@&apos;IP&apos;
+&#x4FEE;&#x6539;&#x7528;&#x6237;
+rename user &apos;&#x8001;&#x7528;&#x6237;&#x540D;&apos;@&apos;IP&apos; to &apos;&#x8001;&#x7528;&#x6237;&#x540D;&apos;@&apos;IP&apos;
+
+&#x4E22;&#x5931;root&#x5BC6;&#x7801;
+mysqld_safe --skip-grant-tables&amp;  
+ps: &#x5728;&#x542F;&#x52A8;mysql&#x65F6;&#x4E0D;&#x542F;&#x52A8;grant-tables&#xFF0C;&#x6388;&#x6743;&#x8868;
+mysql -u root mysql
+mysql&gt; UPDATE user SET password=PASSWORD(&quot;new password&quot;) WHERE user=&apos;root&apos;;
+mysql&gt; FLUSH PRIVILEGES;
+</code></pre><h3 id="&#x7528;&#x6237;&#x6388;&#x6743;"><a name="&#x7528;&#x6237;&#x6388;&#x6743;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x6388;&#x6743;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x6388;&#x6743;</h3>
+<pre><code>&#x4E3A;&#x7528;&#x6237;&#x6388; &#x6307;&#x5B9A;&#x6743;&#x9650;  
+grant select,insert,update on &#x6570;&#x636E;&#x5E93;.&#x8868;&#x540D; to &apos;&#x7528;&#x6237;&#x540D;&apos;@&apos;%&apos;; 
+
+&#x4E3A;&#x7528;&#x6237;&#x6388; &#x6240;&#x6709;&#x6743;&#x9650;,&#x9664;&#x4E86;root&#x6743;&#x9650;
+grant all privileges on db1.t1 on &#x6570;&#x636E;&#x5E93;.&#x8868;&#x540D; to &apos;&#x7528;&#x6237;&#x540D;&apos;@&apos;%&apos;; 
+
+&#x5237;&#x65B0;&#x6388;&#x6743;
+FLUSH PRIVILEGES 
+
+&#x53BB;&#x9664;&#x6743;&#x9650;&#xFF1B;
+12 revoke select on db_name.* from&#x3000;&apos;&#x7528;&#x6237;&#x540D;&apos;@&apos;IP&apos;;
+</code></pre><h2 id="&#x5E93;&#x64CD;&#x4F5C;-jackolantern"><a name="&#x5E93;&#x64CD;&#x4F5C;-jackolantern" class="anchor-navigation-ex-anchor" href="#&#x5E93;&#x64CD;&#x4F5C;-jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E93;&#x64CD;&#x4F5C; :jack_o_lantern:</h2>
+<h3 id="&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x5E93;"><a name="&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x6570;&#x636E;&#x5E93;</h3>
+<p>information_schema&#xFF1A; &#x865A;&#x62DF;&#x5E93;&#xFF0C;&#x4E0D;&#x5360;&#x7528;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#xFF0C;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x6570;&#x636E;&#x5E93;&#x542F;&#x52A8;&#x540E;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x7528;&#x6237;&#x8868;&#x4FE1;&#x606F;&#x3001;&#x5217;&#x4FE1;&#x606F;&#x3001;&#x6743;&#x9650;&#x4FE1;&#x606F;&#x3001;&#x5B57;&#x7B26;&#x4FE1;&#x606F;&#x7B49;
+performance_schema&#xFF1A; MySQL 5.5&#x5F00;&#x59CB;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#xFF1A;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x6536;&#x96C6;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x6027;&#x80FD;&#x53C2;&#x6570;&#xFF0C;&#x8BB0;&#x5F55;&#x5904;&#x7406;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#x65F6;&#x53D1;&#x751F;&#x7684;&#x5404;&#x79CD;&#x4E8B;&#x4EF6;&#x3001;&#x9501;&#x7B49;&#x73B0;&#x8C61; 
+mysql&#xFF1A;&#x6388;&#x6743;&#x5E93;&#xFF0C;&#x4E3B;&#x8981;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x7684;&#x6743;&#x9650;&#x4FE1;&#x606F;
+test&#xFF1A;MySQL&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x7684;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x5E93;</p>
+<h3 id="&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;"><a name="&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</h3>
+<h4 id="&#x6570;&#x636E;&#x5E93;&#x547D;&#x540D;&#x89C4;&#x5219;"><a name="&#x6570;&#x636E;&#x5E93;&#x547D;&#x540D;&#x89C4;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x547D;&#x540D;&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x547D;&#x540D;&#x89C4;&#x5219;</h4>
+<pre><code>&#x53EF;&#x4EE5;&#x7531;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x3001;&#x4E0B;&#x5212;&#x7EBF;&#x3001;&#xFF20;&#x3001;&#xFF03;&#x3001;&#xFF04;
+&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;
+&#x552F;&#x4E00;&#x6027;
+&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57;&#x5982; create select
+&#x4E0D;&#x80FD;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x6570;&#x5B57;
+&#x6700;&#x957F;128&#x4F4D;
+</code></pre><h4 id="&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><a name="&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</h4>
+<pre><code>1.&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;
+show databases;
+show create database db1;
+select database();
+ps: &#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x5E93;&#xFF1A;
+&#x3000;&#x3000;mysql - &#x7528;&#x6237;&#x6743;&#x9650;&#x76F8;&#x5173;&#x6570;&#x636E;
+&#x3000;&#x3000;test - &#x7528;&#x4E8E;&#x7528;&#x6237;&#x6D4B;&#x8BD5;&#x6570;&#x636E;
+&#x3000;&#x3000;information_schema - MySQL&#x672C;&#x8EAB;&#x67B6;&#x6784;&#x76F8;&#x5173;&#x6570;&#x636E;
+
+2.&#x9009;&#x62E9;&#x6570;&#x636E;&#x5E93;
+USE &#x6570;&#x636E;&#x5E93;&#x540D;
+
+3.&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x5E76;&#x8BBE;&#x7F6E;&#x7F16;&#x7801;&#x96C6;
+create database &#x6570;&#x636E;&#x5E93;&#x540D; character set =&apos;utf8&apos;
+
+4.&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;
+DORP DATABASE &#x6570;&#x636E;&#x5E93;&#x540D;;
+
+5.&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;
+alter database db1 charset utf8;
+</code></pre><h2 id="&#x8868;&#x64CD;&#x4F5C;-jackolantern"><a name="&#x8868;&#x64CD;&#x4F5C;-jackolantern" class="anchor-navigation-ex-anchor" href="#&#x8868;&#x64CD;&#x4F5C;-jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8868;&#x64CD;&#x4F5C; :jack_o_lantern:</h2>
+<h3 id="&#x8868;&#x4ECB;&#x7ECD;"><a name="&#x8868;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x8868;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8868;&#x4ECB;&#x7ECD;</h3>
+<p>&#x8868;&#x76F8;&#x5F53;&#x4E8E;&#x6587;&#x4EF6;&#xFF0C;&#x8868;&#x4E2D;&#x7684;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x6587;&#x4EF6;&#x7684;&#x4E00;&#x884C;&#x5185;&#x5BB9;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x8868;&#x4E2D;&#x7684;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x6807;&#x9898;&#xFF0C;&#x79F0;&#x4E3A;&#x8868;&#x7684;&#x5B57;&#x6BB5;</p>
+<h3 id="&#x521B;&#x5EFA;&#x8868;"><a name="&#x521B;&#x5EFA;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x8868;</h3>
+<pre><code>create table &#x8868;&#x540D;(
+&#x5B57;&#x6BB5;&#x540D; &#x7C7B;&#x578B;[&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x5982;&#xFF1A;not null auto_increment primary key default 0],        -- &#x975E;&#x7A7A;&#x3001;&#x9012;&#x589E;&#x2014;&#x2014;&#x552F;&#x4E00;&#x6027;&#xFF0C;&#x4E3B;&#x952E;&#xFF0C;&#x9ED8;&#x8BA4;&#x5217;&#x503C;
+)ENGINE=InnoDB&#x3000;&#x3000;&#x3000;&#x3000;-- &#x8BBE;&#x7F6E;&#x8868;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#xFF0C;&#x4E00;&#x822C;&#x5E38;&#x7528;InnoDB&#x548C;MyISAM&#xFF1B;InnoDB&#x53EF;&#x9760;&#xFF0C;&#x652F;&#x6301;&#x4E8B;&#x52A1;&#xFF1B;MyISAM&#x9AD8;&#x6548;&#x4E0D;&#x652F;&#x6301;&#x5168;&#x6587;&#x68C0;&#x7D22;
+DEFAULT charset=utf8;&#x3000;&#x3000;-- &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x9632;&#x6B62;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6587;&#x4E71;&#x7801;
+-- &#x5982;&#x679C;&#x6709;&#x6761;&#x4EF6;&#x7684;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;   
+CREATE TABLE IF NOT EXISTS &#x8868;&#x540D;(........
+&#x6CE8;&#x610F;&#xFF1A;
+1. &#x5728;&#x540C;&#x4E00;&#x5F20;&#x8868;&#x4E2D;&#xFF0C;&#x5B57;&#x6BB5;&#x540D;&#x662F;&#x4E0D;&#x80FD;&#x76F8;&#x540C;
+2. &#x5BBD;&#x5EA6;&#x548C;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x53EF;&#x9009;
+3. &#x5B57;&#x6BB5;&#x540D;&#x548C;&#x7C7B;&#x578B;&#x662F;&#x5FC5;&#x987B;&#x7684;
+</code></pre><h3 id="&#x4FEE;&#x6539;&#x8868;"><a name="&#x4FEE;&#x6539;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x8868;</h3>
+<pre><code>1. &#x4FEE;&#x6539;&#x8868;&#x540D;
+ALTER TABLE &#x65E7;&#x8868;&#x540D; RENAME &#x65B0;&#x8868;&#x540D;;
+RENAME TABLE &#x65E7;&#x8868;&#x540D; TO &#x65B0;&#x8868;&#x540D;;
+
+2. &#x589E;&#x52A0;&#x5B57;&#x6BB5;
+ALTER TABLE &#x8868;&#x540D; ADD &#x5B57;&#x6BB5;&#x540D;  &#x6570;&#x636E;&#x7C7B;&#x578B; [&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x2026;],
+ALTER TABLE &#x8868;&#x540D; ADD &#x5B57;&#x6BB5;&#x540D;  &#x6570;&#x636E;&#x7C7B;&#x578B; [&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x2026;] FIRST;
+ALTER TABLE &#x8868;&#x540D; ADD &#x5B57;&#x6BB5;&#x540D;  &#x6570;&#x636E;&#x7C7B;&#x578B; [&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x2026;] AFTER &#x5B57;&#x6BB5;&#x540D;;                        
+3. &#x5220;&#x9664;&#x5B57;&#x6BB5;
+ALTER TABLE &#x8868;&#x540D; DROP &#x5B57;&#x6BB5;&#x540D;;
+
+4. &#x4FEE;&#x6539;&#x5B57;&#x6BB5;
+ALTER TABLE &#x8868;&#x540D; MODIFY  &#x5B57;&#x6BB5;&#x540D; &#x6570;&#x636E;&#x7C7B;&#x578B; [&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x2026;];
+ALTER TABLE &#x8868;&#x540D; CHANGE &#x65E7;&#x5B57;&#x6BB5;&#x540D; &#x65B0;&#x5B57;&#x6BB5;&#x540D; &#x65E7;&#x6570;&#x636E;&#x7C7B;&#x578B; [&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x2026;];
+ALTER TABLE &#x8868;&#x540D; CHANGE &#x65E7;&#x5B57;&#x6BB5;&#x540D; &#x65B0;&#x5B57;&#x6BB5;&#x540D; &#x65B0;&#x6570;&#x636E;&#x7C7B;&#x578B; [&#x5B8C;&#x6574;&#x6027;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x2026;];
+</code></pre><h3 id="&#x590D;&#x5236;&#x8868;"><a name="&#x590D;&#x5236;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x5236;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x590D;&#x5236;&#x8868;</h3>
+<pre><code>&#x590D;&#x5236;&#x8868;&#x7ED3;&#x6784;&#xFF0B;&#x8BB0;&#x5F55; &#xFF08;key&#x4E0D;&#x4F1A;&#x590D;&#x5236;: &#x4E3B;&#x952E;&#x3001;&#x5916;&#x952E;&#x548C;&#x7D22;&#x5F15;&#xFF09;
+create table new_tablename select * from tablename;
+
+&#x6216;&#x8005;&#x90E8;&#x5206;&#x590D;&#x5236;&#xFF1A;
+CREATE TABLE new1_tablename SELECT &#x5B57;&#x6BB5;&#x540D; FROM tablename;
+
+&#x53EA;&#x590D;&#x5236;&#x8868;&#x7ED3;&#x6784;
+select * from tablename where 1=2;     //&#x6761;&#x4EF6;&#x4E3A;&#x5047;&#xFF0C;&#x67E5;&#x4E0D;&#x5230;&#x4EFB;&#x4F55;&#x8BB0;&#x5F55;
+create table new1_tablename select * from tablename where 1=2;
+</code></pre><h3 id="&#x67E5;&#x770B;&#x8868;"><a name="&#x67E5;&#x770B;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x8868;</h3>
+<pre><code>SHOW TABALES;
+</code></pre><h3 id="&#x5220;&#x9664;&#x8868;"><a name="&#x5220;&#x9664;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x8868;</h3>
+<pre><code>DROP TABLE &#x8868;&#x540D;;
+</code></pre><h3 id="&#x6E05;&#x7A7A;&#x8868;"><a name="&#x6E05;&#x7A7A;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x6E05;&#x7A7A;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E05;&#x7A7A;&#x8868;</h3>
+<pre><code>truncate table &#x8868;&#x540D;;
+</code></pre><h3 id="&#x91CD;&#x547D;&#x540D;&#x8868;"><a name="&#x91CD;&#x547D;&#x540D;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x547D;&#x540D;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x547D;&#x540D;&#x8868;</h3>
+<pre><code>RENAME TABLE &#x65E7;&#x8868;&#x540D; TO &#x65B0;&#x8868;&#x540D;;
+
+&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF1A;
+
+ALTER TABLE &#x65E7;&#x8868;&#x540D; RENAME &#x65B0;&#x8868;&#x540D;;
+</code></pre><h2 id="&#x6570;&#x636E;&#x64CD;&#x4F5C;-jackolantern"><a name="&#x6570;&#x636E;&#x64CD;&#x4F5C;-jackolantern" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x64CD;&#x4F5C;-jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x64CD;&#x4F5C; :jack_o_lantern:</h2>
+<h3 id="&#x65B0;&#x589E;"><a name="&#x65B0;&#x589E;" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x589E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x589E;</h3>
+<pre><code>1. &#x63D2;&#x5165;&#x5B8C;&#x6574;&#x6570;&#x636E;&#xFF08;&#x987A;&#x5E8F;&#x63D2;&#x5165;&#xFF09;
+    &#x8BED;&#x6CD5;&#x4E00;&#xFF1A;
+    INSERT INTO &#x8868;&#x540D;(&#x5B57;&#x6BB5;1,&#x5B57;&#x6BB5;2,&#x5B57;&#x6BB5;3&#x2026;&#x5B57;&#x6BB5;n) VALUES(&#x503C;1,&#x503C;2,&#x503C;3&#x2026;&#x503C;n);
+
+    &#x8BED;&#x6CD5;&#x4E8C;&#xFF1A;
+    INSERT INTO &#x8868;&#x540D; VALUES (&#x503C;1,&#x503C;2,&#x503C;3&#x2026;&#x503C;n);
+
+2. &#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x63D2;&#x5165;&#x6570;&#x636E;
+    &#x8BED;&#x6CD5;&#xFF1A;
+    INSERT INTO &#x8868;&#x540D;(&#x5B57;&#x6BB5;1,&#x5B57;&#x6BB5;2,&#x5B57;&#x6BB5;3&#x2026;) VALUES (&#x503C;1,&#x503C;2,&#x503C;3&#x2026;);
+
+3. &#x63D2;&#x5165;&#x591A;&#x6761;&#x8BB0;&#x5F55;
+    &#x8BED;&#x6CD5;&#xFF1A;
+    INSERT INTO &#x8868;&#x540D; VALUES
+        (&#x503C;1,&#x503C;2,&#x503C;3&#x2026;&#x503C;n),
+        (&#x503C;1,&#x503C;2,&#x503C;3&#x2026;&#x503C;n),
+        (&#x503C;1,&#x503C;2,&#x503C;3&#x2026;&#x503C;n);
+
+4. &#x63D2;&#x5165;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;
+    &#x8BED;&#x6CD5;&#xFF1A;
+    INSERT INTO &#x8868;&#x540D;(&#x5B57;&#x6BB5;1,&#x5B57;&#x6BB5;2,&#x5B57;&#x6BB5;3&#x2026;&#x5B57;&#x6BB5;n) 
+                    SELECT (&#x5B57;&#x6BB5;1,&#x5B57;&#x6BB5;2,&#x5B57;&#x6BB5;3&#x2026;&#x5B57;&#x6BB5;n) FROM &#x8868;2
+                    WHERE &#x2026;;
+</code></pre><h3 id="&#x4FEE;&#x6539;"><a name="&#x4FEE;&#x6539;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;</h3>
+<pre><code>update table_name SET &#x5B57;&#x6BB5;&#x540D;=&#x66F4;&#x65B0;&#x503C;  WHERE &#x6761;&#x4EF6;&#x5B57;&#x6BB5;=&#x6761;&#x4EF6;&#x503C;;
+</code></pre><h3 id="&#x5220;&#x9664;"><a name="&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;</h3>
+<pre><code>DELETE FROM &#x8868;&#x540D;&#x79F0; WHERE &#x6761;&#x4EF6;&#x5B57;&#x6BB5;=&#x6761;&#x4EF6;&#x503C;;
+</code></pre><h3 id="&#x67E5;&#x8BE2;"><a name="&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;</h3>
+<h4 id="&#x5355;&#x8868;&#x67E5;&#x8BE2;"><a name="&#x5355;&#x8868;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x8868;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x8868;&#x67E5;&#x8BE2;</h4>
+<h5 id="&#x8BED;&#x6CD5;"><a name="&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BED;&#x6CD5;</h5>
+<pre><code>SELECT &#x5B57;&#x6BB5;1,&#x5B57;&#x6BB5;2... FROM &#x8868;&#x540D;
+                  WHERE &#x6761;&#x4EF6;
+                  GROUP BY field
+                  HAVING &#x7B5B;&#x9009;
+                  ORDER BY field
+                  LIMIT &#x9650;&#x5236;&#x6761;&#x6570;
+</code></pre><h5 id="&#x5173;&#x952E;&#x5B57;&#x7684;&#x6267;&#x884C;&#x4F18;&#x5148;&#x7EA7;"><a name="&#x5173;&#x952E;&#x5B57;&#x7684;&#x6267;&#x884C;&#x4F18;&#x5148;&#x7EA7;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x952E;&#x5B57;&#x7684;&#x6267;&#x884C;&#x4F18;&#x5148;&#x7EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x952E;&#x5B57;&#x7684;&#x6267;&#x884C;&#x4F18;&#x5148;&#x7EA7;</h5>
+<pre><code>&#x91CD;&#x70B9;&#x4E2D;&#x7684;&#x91CD;&#x70B9;&#xFF1A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x6267;&#x884C;&#x4F18;&#x5148;&#x7EA7;
+from                
+where
+group by
+&#x805A;&#x5408;
+having
+select
+distinct
+order by
+limit
+</code></pre><p><strong>1.&#x627E;&#x5230;&#x8868;:from</strong></p>
+<p><strong>2.&#x62FF;&#x7740;where&#x6307;&#x5B9A;&#x7684;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF0C;&#x53BB;&#x6587;&#x4EF6;/&#x8868;&#x4E2D;&#x53D6;&#x51FA;&#x4E00;&#x6761;&#x6761;&#x8BB0;&#x5F55;</strong></p>
+<p><strong>3.&#x5C06;&#x53D6;&#x51FA;&#x7684;&#x4E00;&#x6761;&#x6761;&#x8BB0;&#x5F55;&#x8FDB;&#x884C;&#x5206;&#x7EC4;group by&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;group by&#xFF0C;&#x5219;&#x6574;&#x4F53;&#x4F5C;&#x4E3A;&#x4E00;&#x7EC4;</strong></p>
+<p><strong>4.&#x5C06;&#x5206;&#x7EC4;&#x7684;&#x7ED3;&#x679C;&#x8FDB;&#x884C;having&#x8FC7;&#x6EE4;</strong></p>
+<p><strong>5.&#x6267;&#x884C;select</strong></p>
+<p><strong>6.&#x53BB;&#x91CD;</strong></p>
+<p><strong>7.&#x5C06;&#x7ED3;&#x679C;&#x6309;&#x6761;&#x4EF6;&#x6392;&#x5E8F;&#xFF1A;order by</strong></p>
+<p><strong>8.&#x9650;&#x5236;&#x7ED3;&#x679C;&#x7684;&#x663E;&#x793A;&#x6761;&#x6570;</strong></p>
+<h5 id="where&#x7EA6;&#x675F;"><a name="where&#x7EA6;&#x675F;" class="anchor-navigation-ex-anchor" href="#where&#x7EA6;&#x675F;"><i class="fa fa-link" aria-hidden="true"></i></a>WHERE&#x7EA6;&#x675F;</h5>
+<p>where&#x5B57;&#x53E5;&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF1A;</p>
+<ol>
+<li><p>&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;&gt; &lt; &gt;= &lt;= &lt;&gt; !=</p>
+</li>
+<li><p>between 10 and 20 &#x503C;&#x5728;10&#x5230;20&#x4E4B;&#x95F4;</p>
+</li>
+<li><p>in(10,20,30) &#x503C;&#x662F;10&#x6216;20&#x6216;30</p>
+</li>
+<li><p>like &apos;timo%&apos;</p>
+<p>pattern&#x53EF;&#x4EE5;&#x662F;%&#x6216;_&#xFF0C;</p>
+<p>%&#x8868;&#x793A;&#x4EFB;&#x610F;&#x591A;&#x5B57;&#x7B26;</p>
+<p>_&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26; </p>
+</li>
+<li><p>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;&#x5728;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26; and or not</p>
+</li>
+</ol>
+<h4 id="&#x591A;&#x8868;&#x67E5;&#x8BE2;"><a name="&#x591A;&#x8868;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x8868;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x8868;&#x67E5;&#x8BE2;</h4>
+<h5 id="&#x5916;&#x8FDE;&#x63A5;&#x8BED;&#x6CD5;"><a name="&#x5916;&#x8FDE;&#x63A5;&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5916;&#x8FDE;&#x63A5;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5916;&#x8FDE;&#x63A5;&#x8BED;&#x6CD5;</h5>
+<pre><code>SELECT &#x5B57;&#x6BB5;&#x5217;&#x8868;
+    FROM &#x8868;1 INNER|LEFT|RIGHT JOIN &#x8868;2
+    ON &#x8868;1.&#x5B57;&#x6BB5; = &#x8868;2.&#x5B57;&#x6BB5;;
+</code></pre><h5 id="&#x4EA4;&#x53C9;&#x8FDE;&#x63A5;&#xFF1A;&#x4E0D;&#x9002;&#x7528;&#x4EFB;&#x4F55;&#x5339;&#x914D;&#x6761;&#x4EF6;&#xFF0C;&#x751F;&#x6210;&#x7B1B;&#x5361;&#x5C14;&#x4E58;&#x79EF;"><a name="&#x4EA4;&#x53C9;&#x8FDE;&#x63A5;&#xFF1A;&#x4E0D;&#x9002;&#x7528;&#x4EFB;&#x4F55;&#x5339;&#x914D;&#x6761;&#x4EF6;&#xFF0C;&#x751F;&#x6210;&#x7B1B;&#x5361;&#x5C14;&#x4E58;&#x79EF;" class="anchor-navigation-ex-anchor" href="#&#x4EA4;&#x53C9;&#x8FDE;&#x63A5;&#xFF1A;&#x4E0D;&#x9002;&#x7528;&#x4EFB;&#x4F55;&#x5339;&#x914D;&#x6761;&#x4EF6;&#xFF0C;&#x751F;&#x6210;&#x7B1B;&#x5361;&#x5C14;&#x4E58;&#x79EF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x53C9;&#x8FDE;&#x63A5;&#xFF1A;&#x4E0D;&#x9002;&#x7528;&#x4EFB;&#x4F55;&#x5339;&#x914D;&#x6761;&#x4EF6;&#xFF0C;&#x751F;&#x6210;&#x7B1B;&#x5361;&#x5C14;&#x4E58;&#x79EF;</h5>
+<pre><code>select * from &#x8868;1,&#x8868;2;
+</code></pre><h5 id="&#x5185;&#x8FDE;&#x63A5;&#xFF1A;&#x53EA;&#x8FDE;&#x63A5;&#x5339;&#x914D;&#x7684;&#x884C;"><a name="&#x5185;&#x8FDE;&#x63A5;&#xFF1A;&#x53EA;&#x8FDE;&#x63A5;&#x5339;&#x914D;&#x7684;&#x884C;" class="anchor-navigation-ex-anchor" href="#&#x5185;&#x8FDE;&#x63A5;&#xFF1A;&#x53EA;&#x8FDE;&#x63A5;&#x5339;&#x914D;&#x7684;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5185;&#x8FDE;&#x63A5;&#xFF1A;&#x53EA;&#x8FDE;&#x63A5;&#x5339;&#x914D;&#x7684;&#x884C;</h5>
+<pre><code>#&#x627E;&#x4E24;&#x5F20;&#x8868;&#x5171;&#x6709;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5229;&#x7528;&#x6761;&#x4EF6;&#x4ECE;&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x7ED3;&#x679C;&#x4E2D;&#x7B5B;&#x9009;&#x51FA;&#x4E86;&#x6B63;&#x786E;&#x7684;&#x7ED3;&#x679C;
+</code></pre><p>pass</p>
+<h5 id="&#x5916;&#x94FE;&#x63A5;&#x4E4B;&#x5DE6;&#x8FDE;&#x63A5;&#xFF1A;&#x4F18;&#x5148;&#x663E;&#x793A;&#x5DE6;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;"><a name="&#x5916;&#x94FE;&#x63A5;&#x4E4B;&#x5DE6;&#x8FDE;&#x63A5;&#xFF1A;&#x4F18;&#x5148;&#x663E;&#x793A;&#x5DE6;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x5916;&#x94FE;&#x63A5;&#x4E4B;&#x5DE6;&#x8FDE;&#x63A5;&#xFF1A;&#x4F18;&#x5148;&#x663E;&#x793A;&#x5DE6;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5916;&#x94FE;&#x63A5;&#x4E4B;&#x5DE6;&#x8FDE;&#x63A5;&#xFF1A;&#x4F18;&#x5148;&#x663E;&#x793A;&#x5DE6;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;</h5>
+<pre><code>#&#x4EE5;&#x5DE6;&#x8868;&#x4E3A;&#x51C6;&#xFF0C;&#x5339;&#x914D;&#x6240;&#x6709;&#x7ED3;&#x679C;
+#&#x672C;&#x8D28;&#x5C31;&#x662F;&#xFF1A;&#x5728;&#x5185;&#x8FDE;&#x63A5;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0;&#x5DE6;&#x8FB9;&#x6709;&#x53F3;&#x8FB9;&#x6CA1;&#x6709;&#x7684;&#x7ED3;&#x679C;
+</code></pre><p>pass</p>
+<h5 id="&#x5916;&#x94FE;&#x63A5;&#x4E4B;&#x53F3;&#x8FDE;&#x63A5;&#xFF1A;&#x4F18;&#x5148;&#x663E;&#x793A;&#x53F3;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;"><a name="&#x5916;&#x94FE;&#x63A5;&#x4E4B;&#x53F3;&#x8FDE;&#x63A5;&#xFF1A;&#x4F18;&#x5148;&#x663E;&#x793A;&#x53F3;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x5916;&#x94FE;&#x63A5;&#x4E4B;&#x53F3;&#x8FDE;&#x63A5;&#xFF1A;&#x4F18;&#x5148;&#x663E;&#x793A;&#x53F3;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5916;&#x94FE;&#x63A5;&#x4E4B;&#x53F3;&#x8FDE;&#x63A5;&#xFF1A;&#x4F18;&#x5148;&#x663E;&#x793A;&#x53F3;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;</h5>
+<pre><code>#&#x4EE5;&#x53F3;&#x8868;&#x4E3A;&#x51C6;&#xFF0C;&#x5373;&#x627E;&#x51FA;&#x6240;&#x6709;&#x90E8;&#x95E8;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x6CA1;&#x6709;&#x5458;&#x5DE5;&#x7684;&#x90E8;&#x95E8;
+#&#x672C;&#x8D28;&#x5C31;&#x662F;&#xFF1A;&#x5728;&#x5185;&#x8FDE;&#x63A5;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0;&#x53F3;&#x8FB9;&#x6709;&#x5DE6;&#x8FB9;&#x6CA1;&#x6709;&#x7684;&#x7ED3;&#x679C;
+</code></pre><p>pass</p>
+<h5 id="&#x5168;&#x5916;&#x94FE;&#x63A5;&#xFF1A;&#x663E;&#x793A;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;"><a name="&#x5168;&#x5916;&#x94FE;&#x63A5;&#xFF1A;&#x663E;&#x793A;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x5168;&#x5916;&#x94FE;&#x63A5;&#xFF1A;&#x663E;&#x793A;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5168;&#x5916;&#x94FE;&#x63A5;&#xFF1A;&#x663E;&#x793A;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x8868;&#x5168;&#x90E8;&#x8BB0;&#x5F55;</h5>
+<pre><code>&#x5168;&#x5916;&#x8FDE;&#x63A5;&#xFF1A;&#x5728;&#x5185;&#x8FDE;&#x63A5;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0;&#x5DE6;&#x8FB9;&#x6709;&#x53F3;&#x8FB9;&#x6CA1;&#x6709;&#x7684;&#x548C;&#x53F3;&#x8FB9;&#x6709;&#x5DE6;&#x8FB9;&#x6CA1;&#x6709;&#x7684;&#x7ED3;&#x679C;
+&#x6CE8;&#x610F;&#xFF1A;
+    mysql&#x4E0D;&#x652F;&#x6301;&#x5168;&#x5916;&#x8FDE;&#x63A5; full JOIN
+    union&#x4E0E;union all&#x7684;&#x533A;&#x522B;&#xFF1A;union&#x4F1A;&#x53BB;&#x6389;&#x76F8;&#x540C;&#x7684;&#x7EAA;&#x5F55;
+</code></pre><p>pass</p>
+<h4 id="&#x5B50;&#x67E5;&#x8BE2;"><a name="&#x5B50;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x67E5;&#x8BE2;</h4>
+<pre><code>1&#xFF1A;&#x5B50;&#x67E5;&#x8BE2;&#x662F;&#x5C06;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x5D4C;&#x5957;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E2D;&#x3002;
+2&#xFF1A;&#x5185;&#x5C42;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x7684;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x5916;&#x5C42;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x63D0;&#x4F9B;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x3002;
+3&#xFF1A;&#x5B50;&#x67E5;&#x8BE2;&#x4E2D;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#xFF1A;IN&#x3001;NOT IN&#x3001;ANY&#x3001;ALL&#x3001;EXISTS &#x548C; NOT EXISTS&#x7B49;&#x5173;&#x952E;&#x5B57;
+4&#xFF1A;&#x8FD8;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;= &#x3001; !=&#x3001;&gt; &#x3001;&lt;&#x7B49;
+</code></pre><h5 id="&#x5E26;in&#x5173;&#x952E;&#x5B57;&#x7684;&#x5B50;&#x67E5;&#x8BE2;"><a name="&#x5E26;in&#x5173;&#x952E;&#x5B57;&#x7684;&#x5B50;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5E26;in&#x5173;&#x952E;&#x5B57;&#x7684;&#x5B50;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E26;IN&#x5173;&#x952E;&#x5B57;&#x7684;&#x5B50;&#x67E5;&#x8BE2;</h5>
+<pre><code>select &#x5B57;&#x6BB5;&#x540D; from &#x8868;&#x540D;
+    where &#x5B57;&#x6BB5; in (select &#x67E5;&#x8BE2;&#x8BED;&#x53E5;);
+</code></pre><h5 id="&#x5E26;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x5B50;&#x67E5;&#x8BE2;"><a name="&#x5E26;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x5B50;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5E26;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x5B50;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E26;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x5B50;&#x67E5;&#x8BE2;</h5>
+<pre><code>&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;=&#x3001;!=&#x3001;&gt;&#x3001;&gt;=&#x3001;&lt;&#x3001;&lt;=&#x3001;&lt;&gt;
+select &#x5B57;&#x6BB5;&#x540D; from &#x8868;&#x540D; 
+    where &#x5B57;&#x6BB5; &gt; (select &#x67E5;&#x8BE2;&#x8BED;&#x53E5;);
+</code></pre><h5 id="&#x5E26;exists&#x5173;&#x952E;&#x5B57;&#x7684;&#x5B50;&#x67E5;&#x8BE2;"><a name="&#x5E26;exists&#x5173;&#x952E;&#x5B57;&#x7684;&#x5B50;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5E26;exists&#x5173;&#x952E;&#x5B57;&#x7684;&#x5B50;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E26;EXISTS&#x5173;&#x952E;&#x5B57;&#x7684;&#x5B50;&#x67E5;&#x8BE2;</h5>
+<p>EXISTS&#x5173;&#x5B57;&#x952E;&#x5B57;&#x8868;&#x793A;&#x5B58;&#x5728;&#x3002;&#x5728;&#x4F7F;&#x7528;EXISTS&#x5173;&#x952E;&#x5B57;&#x65F6;&#xFF0C;&#x5185;&#x5C42;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E0D;&#x8FD4;&#x56DE;&#x67E5;&#x8BE2;&#x7684;&#x8BB0;&#x5F55;&#x3002;
+&#x800C;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x771F;&#x5047;&#x503C;&#x3002;True&#x6216;False
+&#x5F53;&#x8FD4;&#x56DE;True&#x65F6;&#xFF0C;&#x5916;&#x5C42;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x5C06;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF1B;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;False&#x65F6;&#xFF0C;&#x5916;&#x5C42;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E0D;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;</p>
+<pre><code>select * from &#x8868;&#x540D;
+         where exists
+             (select &#x67E5;&#x8BE2;&#x8BED;&#x53E5;);
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01-MySQL之概述.html" class="navigation navigation-prev " aria-label="Previous page: MySQL之概述">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03-MySQL之视图.html" class="navigation navigation-next " aria-label="Next page: MySQL之视图">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MySQL之基本操作","level":"1.5.2","depth":2,"next":{"title":"MySQL之视图","level":"1.5.3","depth":2,"path":"MySQL/03-MySQL之视图.md","ref":"MySQL/03-MySQL之视图.md","articles":[]},"previous":{"title":"MySQL之概述","level":"1.5.1","depth":2,"path":"MySQL/01-MySQL之概述.md","ref":"MySQL/01-MySQL之概述.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","-lunr","-search","search-plus","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"toggle-chapters":{},"splitter":{},"search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Poppy","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"study-notes","extension":null},"file":{"path":"MySQL/02-MySQL之基本操作.md","mtime":"2018-10-18T09:22:29.228Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-18T09:23:40.380Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,723 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Decorator · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Poppy">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="07-Object-Oriented.html" />
+    
+    
+    <link rel="prev" href="05-Recursion.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Poppy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Django/">
+            
+                <a href="../Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Flask/">
+            
+                <a href="../Flask/">
+            
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../MySQL/">
+            
+                <a href="../MySQL/">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../MySQL/01-MySQL之概述.html">
+            
+                <a href="../MySQL/01-MySQL之概述.html">
+            
+                    
+                    MySQL之概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../MySQL/02-MySQL之基本操作.html">
+            
+                <a href="../MySQL/02-MySQL之基本操作.html">
+            
+                    
+                    MySQL之基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../MySQL/03-MySQL之视图.html">
+            
+                <a href="../MySQL/03-MySQL之视图.html">
+            
+                    
+                    MySQL之视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../MySQL/04-MySQL之索引.html">
+            
+                <a href="../MySQL/04-MySQL之索引.html">
+            
+                    
+                    MySQL之索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="01-Basic Data Type.html">
+            
+                <a href="01-Basic Data Type.html">
+            
+                    
+                    Basic Data Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="02-File Operations.html">
+            
+                <a href="02-File Operations.html">
+            
+                    
+                    File Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="03-Function.html">
+            
+                <a href="03-Function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="04-Function Advanced.html">
+            
+                <a href="04-Function Advanced.html">
+            
+                    
+                    Function Advanced
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="05-Recursion.html">
+            
+                <a href="05-Recursion.html">
+            
+                    
+                    Recursion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.10" data-path="06-Decorator.html">
+            
+                <a href="06-Decorator.html">
+            
+                    
+                    Decorator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="07-Object-Oriented.html">
+            
+                <a href="07-Object-Oriented.html">
+            
+                    
+                    Object-Oriented
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="08-Object-Oriented Advanced.html">
+            
+                <a href="08-Object-Oriented Advanced.html">
+            
+                    
+                    Object-Oriented Advanced
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="README .html">
+            
+                <a href="README .html">
+            
+                    
+                    README 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Socket/">
+            
+                <a href="../Socket/">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Socket/01-Socket Introduce.html">
+            
+                <a href="../Socket/01-Socket Introduce.html">
+            
+                    
+                    Socket Introduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Web/">
+            
+                <a href="../Web/">
+            
+                    
+                    Web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Web/01-HTML.html">
+            
+                <a href="../Web/01-HTML.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Web/02-CSS.html">
+            
+                <a href="../Web/02-CSS.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Web/03-JavaScript.html">
+            
+                <a href="../Web/03-JavaScript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Web/04-BOM And DOM.html">
+            
+                <a href="../Web/04-BOM And DOM.html">
+            
+                    
+                    BOM And DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Decorator</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#decorator"><b></b>Decorator</a></li><ul><li><span class="title-icon "></span><a href="#&#x672C;&#x8D28;jackolantern"><b></b>&#x672C;&#x8D28;:jack_o_lantern:</a></li><li><span class="title-icon "></span><a href="#&#x529F;&#x80FD;jackolantern"><b></b>&#x529F;&#x80FD;:jack_o_lantern:</a></li><li><span class="title-icon "></span><a href="#&#x5F62;&#x6210;jackolantern"><b></b>&#x5F62;&#x6210;:jack_o_lantern:</a></li><li><span class="title-icon "></span><a href="#&#x5F00;&#x653E;&#x5C01;&#x95ED;&#x539F;&#x5219;jackolantern"><b></b>&#x5F00;&#x653E;&#x5C01;&#x95ED;&#x539F;&#x5219;:jack_o_lantern:</a></li></ul></ul></div><a href="#decorator" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="decorator"><a name="decorator" class="anchor-navigation-ex-anchor" href="#decorator"><i class="fa fa-link" aria-hidden="true"></i></a>Decorator</h1>
+<h2 id="&#x672C;&#x8D28;jackolantern"><a name="&#x672C;&#x8D28;jackolantern" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x8D28;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x8D28;:jack_o_lantern:</h2>
+<p>&#x88C5;&#x9970;&#x5668;&#x7684;&#x672C;&#x8D28;&#x2014;&#x2014;&#x4E00;&#x4E2A;&#x95ED;&#x5305;&#x51FD;&#x6570;</p>
+<h2 id="&#x529F;&#x80FD;jackolantern"><a name="&#x529F;&#x80FD;jackolantern" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;:jack_o_lantern:</h2>
+<p>&#x88C5;&#x9970;&#x5668;&#x7684;&#x529F;&#x80FD;&#x2014;&#x2014;&#x5728;&#x4E0D;&#x4FEE;&#x6539;&#x539F;&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x53CA;&#x5176;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x5728;&#x51FD;&#x6570;&#x524D;&#x540E;&#x6DFB;&#x52A0;&#x529F;&#x80FD;</p>
+<h2 id="&#x5F62;&#x6210;jackolantern"><a name="&#x5F62;&#x6210;jackolantern" class="anchor-navigation-ex-anchor" href="#&#x5F62;&#x6210;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F62;&#x6210;:jack_o_lantern:</h2>
+<pre><code>#&#x88C5;&#x9970;&#x5668;&#x7B80;&#x5355;&#x7248;
+
+import time
+
+def func1():
+    print(&apos;in func1&apos;)
+
+def timer(func):
+    def inner():
+        start = time.time()
+        func()
+        print(time.time() - start)
+    return inner
+
+func1 = timer(func1)
+func1()
+</code></pre><p>&#x4E3A;&#x4E86;&#x7701;&#x7565;&#x4E0A;&#x9762;&#x90A3;&#x4E00;&#x6B21;&#x8D4B;&#x503C;&#x8C03;&#x7528;&#xFF0C;python&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x53E5;&#x8BED;&#x6CD5;&#x7CD6;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;</p>
+<pre><code>#&#x88C5;&#x9970;&#x5668;&#x2014;&#x2014;&#x2014;&#x2014;&#x8BED;&#x6CD5;&#x7CD6;
+
+import time
+def timer(func):
+    def inner():
+        start = time.time()
+        func()
+        print(time.time() - start)
+    return inner
+
+@timer   #==&gt; func1 = timer(func1)
+def func1():
+    print(&apos;in func1&apos;)
+
+
+func1()
+</code></pre><pre><code>#&#x5E26;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;
+
+def timer(func):
+    def inner(a):
+        start = time.time()
+        func(a)
+        print(time.time() - start)
+    return inner
+
+@timer
+def func1(a):
+    print(a)
+
+func1(1)
+</code></pre><pre><code>#hold&#x6240;&#x6709;&#x51FD;&#x6570;&#x4F20;&#x53C2;
+
+import time
+def timer(func):
+    def inner(*args,**kwargs):
+        start = time.time()
+        re = func(*args,**kwargs)
+        print(time.time() - start)
+        return re
+    return inner
+
+@timer   #==&gt; func1 = timer(func1)
+def func1(a,b):
+    print(&apos;in func1&apos;)
+
+@timer   #==&gt; func2 = timer(func2)
+def func2(a):
+    print(&apos;in func2 and get a:%s&apos;%(a))
+    return &apos;fun2 over&apos;
+
+func1(&apos;aaaaaa&apos;,&apos;bbbbbb&apos;)
+print(func2(&apos;aaaaaa&apos;))
+</code></pre><pre><code>#&#x5E26;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x88C5;&#x9970;&#x5668;
+
+import time
+def timer(func):
+    def inner(*args,**kwargs):
+        start = time.time()
+        re = func(*args,**kwargs)
+        print(time.time() - start)
+        return re
+    return inner
+
+@timer   #==&gt; func2 = timer(func2)
+def func2(a):
+    print(&apos;in func2 and get a:%s&apos;%(a))
+    return &apos;fun2 over&apos;
+
+func2(&apos;aaaaaa&apos;,&apos;bbbbbb&apos;)
+print(func2(&apos;aaaaaa&apos;))
+</code></pre><pre><code>#&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x88C5;&#x9970;&#x540C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;
+
+def wrapper1(func):
+    def inner():
+        print(&apos;wrapper1 ,before func&apos;)
+        func()
+        print(&apos;wrapper1 ,after func&apos;)
+    return inner
+
+def wrapper2(func):
+    def inner():
+        print(&apos;wrapper2 ,before func&apos;)
+        func()
+        print(&apos;wrapper2 ,after func&apos;)
+    return inner
+
+@wrapper2
+@wrapper1
+def f():
+    print(&apos;in f&apos;)
+
+f()
+</code></pre><p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x4E00;&#x4E9B;&#x67E5;&#x770B;&#x51FD;&#x6570;&#x4FE1;&#x606F;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x5728;&#x88C5;&#x9970;&#x5668;&#x8FD9;&#x91CC;&#x5931;&#x6548;</p>
+<pre><code>#&#x67E5;&#x770B;&#x51FD;&#x6570;&#x4FE1;&#x606F;
+
+def index():
+    &apos;&apos;&apos;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4E3B;&#x9875;&#x4FE1;&#x606F;&apos;&apos;&apos;
+    print(&apos;from index&apos;)
+
+print(index.__doc__)    #&#x67E5;&#x770B;&#x51FD;&#x6570;&#x6CE8;&#x91CA;&#x7684;&#x65B9;&#x6CD5;
+print(index.__name__)   #&#x67E5;&#x770B;&#x51FD;&#x6570;&#x540D;&#x7684;&#x65B9;&#x6CD5;
+</code></pre><p>&#x4E3A;&#x4E86;&#x4E0D;&#x8BA9;&#x5B83;&#x4EEC;&#x5931;&#x6548;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x88C5;&#x9970;&#x5668;&#x4E0A;&#x52A0;&#x4E0A;&#x4E00;&#x70B9;&#x6765;&#x5B8C;&#x5584;</p>
+<pre><code>#&#x88C5;&#x9970;&#x5668;&#x2014;&#x2014;&#x2014;&#x2014;wraps
+
+from functools import wraps
+
+def deco(func):
+    @wraps(func) #&#x52A0;&#x5728;&#x6700;&#x5185;&#x5C42;&#x51FD;&#x6570;&#x6B63;&#x4E0A;&#x65B9;
+    def wrapper(*args,**kwargs):
+        return func(*args,**kwargs)
+    return wrapper
+
+@deco
+def index():
+    &apos;&apos;&apos;&#x54C8;&#x54C8;&#x54C8;&#x54C8;&apos;&apos;&apos;
+    print(&apos;from index&apos;)
+
+print(index.__doc__)
+print(index.__name__)
+</code></pre><h2 id="&#x5F00;&#x653E;&#x5C01;&#x95ED;&#x539F;&#x5219;jackolantern"><a name="&#x5F00;&#x653E;&#x5C01;&#x95ED;&#x539F;&#x5219;jackolantern" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x653E;&#x5C01;&#x95ED;&#x539F;&#x5219;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x653E;&#x5C01;&#x95ED;&#x539F;&#x5219;:jack_o_lantern:</h2>
+<p>&#x200B;    <strong>&#x5BF9;&#x6269;&#x5C55;&#x662F;&#x5F00;&#x653E;&#x7684;</strong></p>
+<p>&#x200B;    &#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E0D;&#x53EF;&#x80FD;&#x5728;&#x8BBE;&#x8BA1;&#x4E4B;&#x521D;&#x5C31;&#x5DF2;&#x7ECF;&#x60F3;&#x597D;&#x4E86;&#x6240;&#x6709;&#x7684;&#x529F;&#x80FD;&#x5E76;&#x4E14;&#x5728;&#x672A;&#x6765;&#x4E0D;&#x505A;&#x4EFB;&#x4F55;&#x5173;&#x5FC3;&#x548C;&#x4FEE;&#x6539;&#xFF0C;&#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x5141;&#x8BB8;&#x4EE3;&#x7801;&#x6269;&#x5C55;&#x3001;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;</p>
+<p>&#x200B;    <strong>&#x5BF9;&#x4FEE;&#x6539;&#x662F;&#x5C01;&#x95ED;&#x7684;</strong></p>
+<p>&#x200B;    &#x6211;&#x4EEC;&#x6240;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#x90FD;&#x662F;&#x8981;&#x4EA4;&#x7ED9;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x968F;&#x610F;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x5F71;&#x54CD;&#x5DF2;&#x7ECF;&#x5728;&#x4F7F;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x7528;&#x6237;</p>
+<p>&#x200B;    <strong>&#x88C5;&#x9970;&#x5668;&#x5B8C;&#x7F8E;&#x7684;&#x9075;&#x5FAA;&#x4E86;&#x5F00;&#x653E;&#x5C01;&#x95ED;&#x539F;&#x5219;</strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-Recursion.html" class="navigation navigation-prev " aria-label="Previous page: Recursion">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="07-Object-Oriented.html" class="navigation navigation-next " aria-label="Next page: Object-Oriented">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Decorator","level":"1.5.10","depth":2,"next":{"title":"Object-Oriented","level":"1.5.11","depth":2,"path":"Python/07-Object-Oriented.md","ref":"Python/07-Object-Oriented.md","articles":[]},"previous":{"title":"Recursion","level":"1.5.9","depth":2,"path":"Python/05-Recursion.md","ref":"Python/05-Recursion.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","-lunr","-search","search-plus","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"toggle-chapters":{},"splitter":{},"search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Poppy","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"study-notes","extension":null},"file":{"path":"Python/06-Decorator.md","mtime":"2018-10-18T09:22:29.228Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-18T09:23:40.380Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

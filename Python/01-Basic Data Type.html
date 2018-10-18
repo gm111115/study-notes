@@ -1,0 +1,925 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Basic Data Type · Poppy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Poppy">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02-File Operations.html" />
+    
+    
+    <link rel="prev" href="../MySQL/04-MySQL之索引.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Poppy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    SUMMARY
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Django/">
+            
+                <a href="../Django/">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Flask/">
+            
+                <a href="../Flask/">
+            
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../MySQL/">
+            
+                <a href="../MySQL/">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../MySQL/01-MySQL之概述.html">
+            
+                <a href="../MySQL/01-MySQL之概述.html">
+            
+                    
+                    MySQL之概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../MySQL/02-MySQL之基本操作.html">
+            
+                <a href="../MySQL/02-MySQL之基本操作.html">
+            
+                    
+                    MySQL之基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../MySQL/03-MySQL之视图.html">
+            
+                <a href="../MySQL/03-MySQL之视图.html">
+            
+                    
+                    MySQL之视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../MySQL/04-MySQL之索引.html">
+            
+                <a href="../MySQL/04-MySQL之索引.html">
+            
+                    
+                    MySQL之索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="01-Basic Data Type.html">
+            
+                <a href="01-Basic Data Type.html">
+            
+                    
+                    Basic Data Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="02-File Operations.html">
+            
+                <a href="02-File Operations.html">
+            
+                    
+                    File Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="03-Function.html">
+            
+                <a href="03-Function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="04-Function Advanced.html">
+            
+                <a href="04-Function Advanced.html">
+            
+                    
+                    Function Advanced
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="05-Recursion.html">
+            
+                <a href="05-Recursion.html">
+            
+                    
+                    Recursion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="06-Decorator.html">
+            
+                <a href="06-Decorator.html">
+            
+                    
+                    Decorator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="07-Object-Oriented.html">
+            
+                <a href="07-Object-Oriented.html">
+            
+                    
+                    Object-Oriented
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="08-Object-Oriented Advanced.html">
+            
+                <a href="08-Object-Oriented Advanced.html">
+            
+                    
+                    Object-Oriented Advanced
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="README .html">
+            
+                <a href="README .html">
+            
+                    
+                    README 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Socket/">
+            
+                <a href="../Socket/">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Socket/01-Socket Introduce.html">
+            
+                <a href="../Socket/01-Socket Introduce.html">
+            
+                    
+                    Socket Introduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Web/">
+            
+                <a href="../Web/">
+            
+                    
+                    Web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Web/01-HTML.html">
+            
+                <a href="../Web/01-HTML.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Web/02-CSS.html">
+            
+                <a href="../Web/02-CSS.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Web/03-JavaScript.html">
+            
+                <a href="../Web/03-JavaScript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Web/04-BOM And DOM.html">
+            
+                <a href="../Web/04-BOM And DOM.html">
+            
+                    
+                    BOM And DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Basic Data Type</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#basic-data-type"><b></b>Basic data type</a></li><ul><li><span class="title-icon "></span><a href="#str&#x5B57;&#x7B26;&#x4E32;jackolantern"><b></b>str&#x5B57;&#x7B26;&#x4E32;:jack_o_lantern:</a></li><li><span class="title-icon "></span><a href="#int&#x6570;&#x5B57;jackolantern"><b></b>int&#x6570;&#x5B57;:jack_o_lantern:</a></li><li><span class="title-icon "></span><a href="#dict&#x5B57;&#x5178;jackolantern"><b></b>dict&#x5B57;&#x5178;:jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x589E;"><b></b>&#x589E;</a></li><li><span class="title-icon "></span><a href="#&#x5220;"><b></b>&#x5220;</a></li><li><span class="title-icon "></span><a href="#&#x6539;"><b></b>&#x6539;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;"><b></b>&#x67E5;</a></li></ul><li><span class="title-icon "></span><a href="#list&#x5217;&#x8868;jackolantern"><b></b>list&#x5217;&#x8868;:jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x589E;_1"><b></b>&#x589E;</a></li><li><span class="title-icon "></span><a href="#&#x5220;_1"><b></b>&#x5220;</a></li><li><span class="title-icon "></span><a href="#&#x6539;_1"><b></b>&#x6539;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;_1"><b></b>&#x67E5;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x7684;&#x5D4C;&#x5957;"><b></b>&#x5217;&#x8868;&#x7684;&#x5D4C;&#x5957;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x7684;&#x53E0;&#x52A0;"><b></b>&#x5217;&#x8868;&#x7684;&#x53E0;&#x52A0;</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x65B9;&#x6CD5;"><b></b>&#x5176;&#x4ED6;&#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#tuple&#x5143;&#x7956;jackolantern"><b></b>tuple&#x5143;&#x7956;:jack_o_lantern:</a></li><li><span class="title-icon "></span><a href="#set&#x96C6;&#x5408;jackolantern"><b></b>set&#x96C6;&#x5408;:jack_o_lantern:</a></li><ul><li><span class="title-icon "></span><a href="#&#x589E;_2"><b></b>&#x589E;</a></li><li><span class="title-icon "></span><a href="#&#x5220;_2"><b></b>&#x5220;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;_2"><b></b>&#x67E5;</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x64CD;&#x4F5C;"><b></b>&#x5176;&#x4ED6;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#frozenset"><b></b>frozenset</a></li></ul><li><span class="title-icon "></span><a href="#bool&#x5E03;&#x5C14;&#x503C;jackolantern"><b></b>bool&#x5E03;&#x5C14;&#x503C;:jack_o_lantern:</a></li></ul></ul></div><a href="#basic-data-type" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="basic-data-type"><a name="basic-data-type" class="anchor-navigation-ex-anchor" href="#basic-data-type"><i class="fa fa-link" aria-hidden="true"></i></a>Basic data type</h1>
+<h2 id="str&#x5B57;&#x7B26;&#x4E32;jackolantern"><a name="str&#x5B57;&#x7B26;&#x4E32;jackolantern" class="anchor-navigation-ex-anchor" href="#str&#x5B57;&#x7B26;&#x4E32;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>str&#x5B57;&#x7B26;&#x4E32;:jack_o_lantern:</h2>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7D22;&#x5F15;&#x4E0E;&#x5207;&#x7247;</p>
+<pre><code> &#x7D22;&#x5F15;&#x5373;&#x4E0B;&#x6807;&#xFF0C;&#x5C31;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7EC4;&#x6210;&#x7684;&#x5143;&#x7D20;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5F00;&#x59CB;&#xFF0C;&#x521D;&#x59CB;&#x7D22;&#x5F15;&#x4E3A;0&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;
+</code></pre><pre><code>a = &apos;ABCDEFGHIJK&apos;
+print(a[0])
+print(a[3])
+print(a[5])
+print(a[7])
+</code></pre><p>&#x200B;    &#x5207;&#x7247;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#xFF08;&#x7D22;&#x5F15;&#xFF1A;&#x7D22;&#x5F15;&#xFF1A;&#x6B65;&#x957F;&#xFF09;&#x622A;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E00;&#x6BB5;&#xFF0C;&#x5F62;&#x6210;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x539F;&#x5219;&#x5C31;&#x662F;&#x987E;&#x5934;&#x4E0D;&#x987E;&#x815A;&#xFF09;</p>
+<pre><code>a = &apos;ABCDEFGHIJK&apos;
+print(a[0:3])
+print(a[2:5])
+print(a[0:]) #&#x9ED8;&#x8BA4;&#x5230;&#x6700;&#x540E;
+print(a[0:-1]) #-1&#x5C31;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;
+print(a[0:5:2]) #&#x52A0;&#x6B65;&#x957F;
+print(a[5:0:-2]) #&#x53CD;&#x5411;&#x52A0;&#x6B65;&#x957F;
+</code></pre><h2 id="int&#x6570;&#x5B57;jackolantern"><a name="int&#x6570;&#x5B57;jackolantern" class="anchor-navigation-ex-anchor" href="#int&#x6570;&#x5B57;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>int&#x6570;&#x5B57;:jack_o_lantern:</h2>
+<p>&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;</p>
+<pre><code class="lang-python">bit_length()&#x3000;&#x3000;&#x5F53;&#x5341;&#x8FDB;&#x5236;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x65F6;&#xFF0C;&#x8F6C;&#x6362;&#x6210;&#x4E8C;&#x8FDB;&#x5236;&#x65F6;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x7684;&#x4F4D;&#x6570;
+a=<span class="hljs-number">3</span>
+b=<span class="hljs-number">6</span>
+data=a.bit_length()
+data1=b.bit_length()
+print(data,data1)
+</code></pre>
+<h2 id="dict&#x5B57;&#x5178;jackolantern"><a name="dict&#x5B57;&#x5178;jackolantern" class="anchor-navigation-ex-anchor" href="#dict&#x5B57;&#x5178;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>dict&#x5B57;&#x5178;:jack_o_lantern:</h2>
+<p>&#x200B;    &#x5B57;&#x5178;&#x662F;python&#x4E2D;&#x552F;&#x4E00;&#x7684;&#x6620;&#x5C04;&#x7C7B;&#x578B;&#xFF0C;&#x91C7;&#x7528;&#x952E;&#x503C;&#x5BF9;&#xFF08;key-value&#xFF09;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x3002;python&#x5BF9;key&#x8FDB;&#x884C;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x8FD0;&#x7B97;&#xFF0C;&#x6839;&#x636E;&#x8BA1;&#x7B97;&#x7684;&#x7ED3;&#x679C;&#x51B3;&#x5B9A;value&#x7684;&#x5B58;&#x50A8;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x5B57;&#x5178;&#x662F;&#x65E0;&#x5E8F;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x4E14;key&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#x3002;&#x53EF;&#x54C8;&#x5E0C;&#x8868;&#x793A;key&#x5FC5;&#x987B;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#xFF1A;&#x6570;&#x5B57;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5143;&#x7956;</p>
+<p>&#x3000;&#x3000;&#x5B57;&#x5178;&#x662F;&#x9664;&#x5217;&#x8868;&#x4EE5;&#x5916;python&#x4E4B;&#x4E2D;&#x6700;&#x7075;&#x6D3B;&#x7684;&#x5185;&#x7F6E;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7C7B;&#x578B;&#x3002;&#x5217;&#x8868;&#x662F;&#x6709;&#x5E8F;&#x7684;&#x5BF9;&#x8C61;&#x96C6;&#x5408;&#xFF0C;&#x5B57;&#x5178;&#x662F;&#x65E0;&#x5E8F;&#x7684;&#x5BF9;&#x8C61;&#x96C6;&#x5408;&#x3002;&#x4E24;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF1A;&#x5B57;&#x5178;&#x5F53;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x662F;&#x901A;&#x8FC7;&#x952E;&#x6765;&#x5B58;&#x53D6;&#x7684;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x901A;&#x8FC7;&#x504F;&#x79FB;&#x5B58;&#x53D6;</p>
+<h3 id="&#x589E;"><a name="&#x589E;" class="anchor-navigation-ex-anchor" href="#&#x589E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x589E;</h3>
+<pre><code>setdefault &#x5728;&#x5B57;&#x5178;&#x4E2D;&#x6DFB;&#x52A0;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5982;&#x679C;&#x53EA;&#x6709;&#x952E;&#x90A3;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x662F;none,&#x4F46;&#x662F;&#x5982;&#x679C;&#x539F;&#x5B57;&#x5178;&#x4E2D;&#x5B58;&#x5728;&#x8BBE;&#x7F6E;&#x7684;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5219;&#x4ED6;&#x4E0D;&#x4F1A;&#x66F4;&#x6539;&#x6216;&#x8005;&#x8986;&#x76D6;
+
+dic.setdefault(&apos;k&apos;,&apos;v&apos;)
+print(dic)      
+dic.setdefault(&apos;k&apos;,&apos;v1&apos;)     
+print(dic)
+
+# {&apos;age&apos;: 18, &apos;name&apos;: &apos;jin&apos;, &apos;sex&apos;: &apos;male&apos;, &apos;k&apos;: &apos;v&apos;}
+# {&apos;age&apos;: 18, &apos;name&apos;: &apos;jin&apos;, &apos;sex&apos;: &apos;male&apos;, &apos;k&apos;: &apos;v&apos;}
+</code></pre><h3 id="&#x5220;"><a name="&#x5220;" class="anchor-navigation-ex-anchor" href="#&#x5220;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;</h3>
+<pre><code>dic_pop = dic.pop(&quot;a&quot;,&apos;&#x65E0;key&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;&#x503C;&apos;)     # pop&#x6839;&#x636E;key&#x5220;&#x9664;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;key&#x5219;&#x8FD4;&#x56DE;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;&#x503C;
+print(dic_pop)
+del dic[&quot;name&quot;]      # &#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;
+print(dic)
+
+dic_pop1 = dic.popitem()      # &#x968F;&#x673A;&#x5220;&#x9664;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5C06;&#x5220;&#x9664;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x4EE5;&#x5143;&#x7956;&#x7684;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;
+print(dic_pop1)      # (&apos;name&apos;,&apos;jin&apos;)
+
+dic_clear = dic.clear()      # &#x6E05;&#x7A7A;&#x5B57;&#x5178;
+print(dic&#xFF0C;dic_clear)      # {} None
+</code></pre><h3 id="&#x6539;"><a name="&#x6539;" class="anchor-navigation-ex-anchor" href="#&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6539;</h3>
+<pre><code>dic = {&quot;name&quot;:&quot;jin&quot;,&quot;age&quot;:18,&quot;sex&quot;:&quot;male&quot;}
+dic2 = {&quot;name&quot;:&quot;alex&quot;,&quot;weight&quot;:75}
+dic2.update(dic)      # &#x5C06;dic&#x6240;&#x6709;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x8986;&#x76D6;&#x6DFB;&#x52A0;&#xFF08;&#x76F8;&#x540C;&#x7684;&#x8986;&#x76D6;&#xFF0C;&#x6CA1;&#x6709;&#x7684;&#x6DFB;&#x52A0;&#xFF09;&#x5230;dic2&#x4E2D;
+print(dic2)
+</code></pre><h3 id="&#x67E5;"><a name="&#x67E5;" class="anchor-navigation-ex-anchor" href="#&#x67E5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;</h3>
+<pre><code>value1 = dic[&apos;name&apos;]      # &#x6CA1;&#x6709;&#x4F1A;&#x62A5;&#x9519;
+print(value1)
+
+value2 = dic.get(&apos;djffdsafg&apos;,&apos;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;&#x503C;&apos;)      # &#x6CA1;&#x6709;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x8BBE;&#x5B9A;&#x7684;&#x8FD4;&#x56DE;&#x503C;
+print(value2)
+</code></pre><p>&#x5176;&#x4ED6;</p>
+<pre><code>item = dic.items()
+print(item,type(item))      # dict_items([(&apos;name&apos;, &apos;jin&apos;), (&apos;sex&apos;, &apos;male&apos;), (&apos;age&apos;, 18)]) &lt;class &apos;dict_items&apos;&gt;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x5C31;&#x662F;dict_items&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x8FED;&#x4EE3;&#x7684;
+
+keys = dic.keys()
+print(keys,type(keys))      # dict_keys([&apos;sex&apos;, &apos;age&apos;, &apos;name&apos;]) &lt;class &apos;dict_keys&apos;&gt;
+
+values = dic.values()
+print(values,type(values))      # dict_values([&apos;male&apos;, 18, &apos;jin&apos;]) &lt;class &apos;dict_values&apos;&gt; &#x540C;&#x4E0A;
+</code></pre><p>&#x5B57;&#x5178;&#x5FAA;&#x73AF;&#x53D6;key&#xFF0C;value</p>
+<pre><code>dic = {&quot;name&quot;:&quot;jin&quot;,&quot;age&quot;:18,&quot;sex&quot;:&quot;male&quot;}
+for key in dic:
+     print(key)
+for item in dic.items():
+     print(item)
+for key,value in dic.items():
+     print(key,value&#xFF09;
+</code></pre><h2 id="list&#x5217;&#x8868;jackolantern"><a name="list&#x5217;&#x8868;jackolantern" class="anchor-navigation-ex-anchor" href="#list&#x5217;&#x8868;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>list&#x5217;&#x8868;:jack_o_lantern:</h2>
+<h3 id="&#x589E;_1"><a name="&#x589E;_1" class="anchor-navigation-ex-anchor" href="#&#x589E;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x589E;</h3>
+<p>append(&#x5728;&#x5217;&#x8868;&#x6700;&#x540E;&#x7684;&#x4F4D;&#x7F6E;&#x6DFB;&#x52A0;&#x5143;&#x7D20;)&#xFF1A;&#x5728;&#x539F;&#x5217;&#x8868;&#x4E0A;&#x8FDB;&#x884C;&#x589E;&#x52A0;</p>
+<pre><code>a=[&apos;alix&apos;,&apos;wusir&apos;,&apos;xiaofang&apos;]
+a.append(&apos;laozi&apos;)
+print(a)       
+
+# [&apos;alex&apos;,&apos;wusir&apos;,&apos;xiaofang&apos;,&apos;laozi&apos;]
+</code></pre><pre><code>a=[&apos;alix&apos;,&apos;wusir&apos;,&apos;xiaofang&apos;]
+while True:
+    username=input(&apos;&#x8BF7;&#x8F93;&#x5165;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF1A;&apos;)
+    if username.lower()==&apos;q&apos;:
+        print(&apos;&#x9000;&#x51FA;&#x6210;&#x529F;&#xFF01;&apos;)
+        break
+    else:
+        a.append(username)
+        print(a)
+
+&#x8BF7;&#x8F93;&#x5165;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF1A;ksdh
+[&apos;alix&apos;, &apos;wusir&apos;, &apos;xiaofang&apos;, &apos;ksdh&apos;]
+&#x8BF7;&#x8F93;&#x5165;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF1A;q
+&#x9000;&#x51FA;&#x6210;&#x529F;&#xFF01;
+</code></pre><p>lnsert&#x63D2;&#x5165;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x5143;&#x7D20;</p>
+<p>insert(index,p_object)</p>
+<pre><code>a=[&apos;taibai&apos;,&apos;jinxin&apos;,&apos;wusir&apos;]
+a.insert(1,&apos;&#x592A;&#x4EAE;&apos;)
+print(a)      
+
+# [&apos;taibai&apos;,&apos;&#x592A;&#x4EAE;&apos;&#xFF0C;&apos;jinxin&apos;,&apos;wusir&apos;]
+</code></pre><p>extend()&#xFF1A;&#x8FED;&#x4EE3;&#x7684;&#x6DFB;&#x52A0;&#xFF0C;&#x52A0;&#x5165;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;</p>
+<pre><code>a=[&apos;taibai&apos;,&apos;jinxin&apos;,&apos;wusir&apos;]
+a.extend(&apos;&#x592A;&#x4EAE;&apos;)
+b=[&apos;taibai&apos;,&apos;&#x592A;&#x4EAE;&apos;,&apos;wusir&apos;]
+b.extend([&apos;&#x91D1;&#x661F;&apos;])
+print(a)&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;
+print(b)&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;
+
+# [&apos;taibai&apos;,&apos;jinxin&apos;,&apos;wusir&apos;,&apos;&#x592A;&apos;,&apos;&#x4EAE;&apos;]
+# [&apos;taibai&apos;,&apos;&#x592A;&#x4EAE;&apos;&#xFF0C;&apos;wusir&apos;,&apos;&#x91D1;&#x661F;&apos;]
+</code></pre><p>&#x3000;&#x3000;&#x5982;&#x679C;extend()&#x6DFB;&#x52A0;&#x7684;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x4F1A;&#x88AB;&#x62C6;&#x5206;&#x6210;&#x5355;&#x4E2A;&#x7684;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x5230;&#x76EE;&#x7684;&#x5217;&#x8868;&#x4E2D;</p>
+<p>&#x3000;&#x3000;&#x5982;&#x679C;extend()&#x6DFB;&#x52A0;&#x7684;&#x662F;&#x5217;&#x8868;&#xFF0C;&#x5219;&#x8BE5;&#x5217;&#x8868;&#x4F1A;&#x88AB;&#x5F53;&#x505A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x6DFB;&#x52A0;&#x5230;&#x76EE;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x6210;&#x4E3A;&#x76EE;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</p>
+<h3 id="&#x5220;_1"><a name="&#x5220;_1" class="anchor-navigation-ex-anchor" href="#&#x5220;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;</h3>
+<p>pop &#x6309;&#x7167;&#x7D22;&#x5F15;&#x53BB;&#x5220;&#x9664;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;</p>
+<pre><code>a=[&apos;taibai&apos;, &apos;&#x592A;&#x4EAE;&apos;, &apos;wusir&apos;, &apos;&#x91D1;&#x661F;&apos;]
+name=a.pop(2)
+print(name)&#x3000;&#x3000;&#x3000;&#x3000;
+print(a)&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;
+
+# wusir
+# [&apos;taibai&apos;,&apos;&#x592A;&#x4EAE;&apos;&#xFF0C;&#x2018;&apos;&#x91D1;&#x661F;&apos;]
+</code></pre><p>&#x200B;    &#x5220;&#x9664;&#x7684;&#x662F;a[2]=&#x2018;wusir&#x2019;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x662F;wusir </p>
+<p>remove() &#x6309;&#x5143;&#x7D20;&#x6765;&#x5220;&#x9664;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;</p>
+<pre><code>a=[&apos;taibai&apos;, &apos;&#x592A;&#x4EAE;&apos;, &apos;wusir&apos;, &apos;&#x91D1;&#x661F;&apos;]
+name=a.remove(&apos;taibai&apos;)
+print(name)&#x3000;&#x3000;
+print(a)&#x3000;&#x3000;&#x3000; 
+
+# None
+# [&apos;&#x592A;&#x4EAE;&apos;, &apos;wusir&apos;, &apos;&#x91D1;&#x661F;&apos;]
+</code></pre><p>&#x3000;&#x3000;&#x7531;&#x4E8E;remove()&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5219;&#x8F93;&#x51FA;name&#x65F6;&#x5F97;&#x5230;&#x7684;&#x662F;0</p>
+<p>clear() &#x6E05;&#x7A7A;&#x5217;&#x8868;&#xFF0C;&#x5C06;&#x5217;&#x8868;&#x53D8;&#x6210;&#x7A7A;&#x5217;&#x8868;</p>
+<pre><code>a=[&apos;taibai&apos;, &apos;&#x592A;&#x4EAE;&apos;, &apos;wusir&apos;, &apos;&#x91D1;&#x661F;&apos;]
+a.clear()
+print(a)&#x3000;&#x3000;&#x3000;&#x3000;
+
+# []
+</code></pre><p>&#x3000;&#x3000;&#x72EC;&#x7ACB;&#x4E3A;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#xFF0C;&#x5217;&#x8868;&#x5728;&#x8FDB;&#x884C;clear()&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x5217;&#x8868;&#xFF0C;&#x5217;&#x8868;&#x8FD8;&#x5728;</p>
+<p>del() &#x53EF;&#x4EE5;&#x6309;&#x7167;&#x7D22;&#x5F15;&#x5220;&#x9664;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x5207;&#x7247;&#x5220;&#x9664;&#xFF0C;&#x53EF;&#x52A0;&#x6B65;&#x957F;&#x3002;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;</p>
+<p>&#x200B;    &#x53EF;&#x4EE5;&#x6309;&#x7167;&#x7D22;&#x5F15;&#x5220;&#x9664;</p>
+<pre><code>a=[&apos;alix&apos;,&apos;taibai&apos;,&apos;tailiang&apos;,&apos;wusir&apos;]
+del a[3]
+print(a)
+
+[&apos;alix&apos;, &apos;taibai&apos;, &apos;tailiang&apos;]
+</code></pre><p>&#x3000;&#x3000;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x5207;&#x7247;&#x5220;&#x9664;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x52A0;&#x6B65;&#x957F;</p>
+<pre><code>b=[&apos;alix&apos;,&apos;taibai&apos;,&apos;tailiang&apos;,&apos;wusir&apos;]
+del b[1:3]
+print(b)
+
+[&apos;alix&apos;, &apos;wusir&apos;]
+</code></pre><h3 id="&#x6539;_1"><a name="&#x6539;_1" class="anchor-navigation-ex-anchor" href="#&#x6539;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6539;</h3>
+<p>&#x200B;    &#x6309;&#x7167;&#x7D22;&#x5F15;&#x6539;&#xFF1A;&#x9002;&#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x5355;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5217;&#x8868;&#x4E2D;</p>
+<pre><code>a=[&apos;alix&apos;,&apos;taibai&apos;,&apos;tailiang&apos;,&apos;wusir&apos;]
+a[3]=&apos;&#x4EAE;&#x4EAE;&apos;
+print(a)
+
+[&apos;alix&apos;, &apos;taibai&apos;, &apos;tailiang&apos;, &apos;&#x4EAE;&#x4EAE;&apos;]
+</code></pre><p>&#x3000;&#x3000;&#x6309;&#x7167;&#x5207;&#x7247;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF1A;&#x5148;&#x5220;&#x9664;&#xFF0C;&#x4E4B;&#x540E;&#x8FED;&#x4EE3;&#x7740;&#x6DFB;&#x52A0;</p>
+<pre><code>a=[&apos;alix&apos;,&apos;taibai&apos;,&apos;tailiang&apos;,&apos;wusir&apos;]
+a[1:3]=&apos;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x4EBA;&apos;
+print(a)
+
+[&apos;alix&apos;, &apos;&#x90FD;&apos;, &apos;&#x662F;&apos;, &apos;&#x4E00;&apos;, &apos;&#x4E2A;&apos;, &apos;&#x4EBA;&apos;, &apos;wusir&apos;]
+</code></pre><p>&#x3000;&#x3000;&#x8BE5;&#x6BB5;&#x4EE3;&#x7801;&#x662F;&#x5C06;&#x5217;&#x8868;&#x4E2D;&#x7684;a[1],a[2]&#x5148;&#x5220;&#x9664;&#xFF0C;&#x4E4B;&#x540E;&#x5C06;&apos;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x4EBA;&apos;&#x4ECE;a[1]&#x8FED;&#x4EE3;&#x7740;&#x6DFB;&#x52A0;&#x5230;&#x5217;&#x8868;a&#x5F53;&#x4E2D;</p>
+<p>&#x3000;&#x3000;&#x8BE5;&#x6BB5;&#x4EE3;&#x7801;&#x662F;&#x5C06;a[1],a[2]&#x73B0;&#x5220;&#x9664;&#xFF0C;&#x4E4B;&#x540E;&#x5C06;&#x5217;&#x8868;[&apos;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x4EBA;&apos;]&#x6DFB;&#x52A0;&#x5230;a[1]&#x7684;&#x4F4D;&#x7F6E;</p>
+<h3 id="&#x67E5;_1"><a name="&#x67E5;_1" class="anchor-navigation-ex-anchor" href="#&#x67E5;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;</h3>
+<p>for&#x5FAA;&#x73AF;&#x67E5;&#x8BE2;</p>
+<pre><code>a=[&apos;alix&apos;, &apos;taibai&apos;, &apos;tailiang&apos;,&apos;wusir&apos;]
+for i in a:
+    print(i)
+
+alix
+taibai
+tailiang
+wusir
+</code></pre><p>&#x6309;&#x7D22;&#x5F15;&#x67E5;&#x8BE2;</p>
+<pre><code>a=[&apos;alix&apos;, &apos;taibai&apos;, &apos;tailiang&apos;,&apos;wusir&apos;]
+print(a[0])
+print(a[1])
+print(a[2])
+print(a[3])
+
+alix
+taibai
+tailiang
+wusir
+</code></pre><h3 id="&#x5217;&#x8868;&#x7684;&#x5D4C;&#x5957;"><a name="&#x5217;&#x8868;&#x7684;&#x5D4C;&#x5957;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x7684;&#x5D4C;&#x5957;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5217;&#x8868;&#x7684;&#x5D4C;&#x5957;</h3>
+<p>&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x88AB;&#x66F4;&#x6539;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x53EF;&#x4EE5;&#x88AB;&#x66F4;&#x6539;</p>
+<pre><code>a=[&apos;alix&apos;, &apos;taibai&apos;,[1,2,3,&apos;yanger,old&apos;], &apos;tailiang&apos;,&apos;wusir&apos;]
+print(a[2])
+print(a[2][2])
+
+[1, 2, 3, &apos;yanger,old&apos;]
+ 3
+</code></pre><pre><code> &#x5C06;&#x5217;&#x8868;li&#x7684;&#x5143;&#x7D20;&apos;yuanhao&apos;&#x7684;&#x9996;&#x5B57;&#x6BCD;&#x53D8;&#x6210;&#x5927;&#x5199;&#xFF0C;&#x7531;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x80FD;&#x88AB;&#x66F4;&#x6539;&#x5C31;&#x53EA;&#x80FD;&#x5C06;&apos;yuanhao&apos;&#x63D0;&#x51FA;&#x4E4B;&#x540E;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9996;&#x5B57;&#x6BCD;&#x4E3A;&#x5927;&#x5199;&#x7684;&apos;Yuanhao&apos;&#xFF0C;&#x4E4B;&#x540E;&#x518D;&#x8D4B;&#x503C;&#x7ED9;li[4]
+</code></pre><pre><code>li=[1,2,3,&apos;taibai&apos;,&apos;yuanhao&apos;,[1,&apos;alix&apos;,3],True]
+print(li[3])  # taibai
+print(li[5][1])  # alix
+s=li[4].capitalize()
+li[4]=s
+print(li)  
+
+# [1, 2, 3, &apos;taibai&apos;, &apos;Yuanhao&apos;, [1, &apos;alix&apos;, 3], True]
+</code></pre><p>&#x3000;&#x3000;&#x5C06;li[4]&#x4E2D;&#x7684;&apos;yuanhao&apos;&#x4E2D;&#x7684;hao&#x7528;&apos;&#x65E5;&#x5929;&apos;&#x6765;&#x4EE3;&#x66FF;&#xFF0C;&#x7531;&#x4E8E;&apos;yuanhao&apos;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x80FD;&#x66F4;&#x6539;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x662F;&#x5148;&#x63D0;&#x51FA;li[4],&#x4E4B;&#x540E;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5C06;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8D4B;&#x503C;&#x7ED9;li[4]</p>
+<pre><code>li=[1,2,3,&apos;taibai&apos;,&apos;yuanhao&apos;,[1,&apos;alix&apos;,3],True]
+s2=li[4].replace(&apos;hao&apos;,&apos;&#x65E5;&#x5929;&apos;)
+li[4]=s2
+print(li)
+
+[1, 2, 3, &apos;taibai&apos;, &apos;yuan&#x65E5;&#x5929;&apos;, [1, &apos;alix&apos;, 3], True]
+</code></pre><p>&#x5BF9;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&apos;&#x4FEE;&#x6539;&apos;&#x548C;&#x5BF9;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;</p>
+<pre><code>li=[1,2,3,&apos;taibai&apos;,&apos;yuanhao&apos;,[1,&apos;alix&apos;,3],True]
+s2=li[4].replace(&apos;hao&apos;,&apos;&#x65E5;&#x5929;&apos;)
+li[4]=s2
+li[4]=li[4][0:4]+&apos;ritian&apos;
+print(li)  
+
+# [1, 2, 3, &apos;taibai&apos;, &apos;yuanritian&apos;, [1, &apos;alix&apos;, 3], True]
+
+li[5][0]=&apos;&#x6587;&#x6770;&apos;
+print(li)  
+
+# [1, 2, 3, &apos;taibai&apos;, &apos;yuanritian&apos;, [&apos;&#x6587;&#x6770;&apos;, &apos;alix&apos;, 3], True]
+
+li[5][1]=li[5][1].upper()
+print(li)  
+
+# [1, 2, 3, &apos;taibai&apos;, &apos;yuanritian&apos;, [&apos;&#x6587;&#x6770;&apos;, &apos;ALIX&apos;, 3], True]
+</code></pre><h3 id="&#x5217;&#x8868;&#x7684;&#x53E0;&#x52A0;"><a name="&#x5217;&#x8868;&#x7684;&#x53E0;&#x52A0;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x7684;&#x53E0;&#x52A0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5217;&#x8868;&#x7684;&#x53E0;&#x52A0;</h3>
+<pre><code>li=[1,2,3]
+l2=[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]
+l3=li+l2
+print(l3)
+
+[1, 2, 3, &apos;a&apos;, &apos;b&apos;, &apos;c&apos;]
+</code></pre><h3 id="&#x5176;&#x4ED6;&#x65B9;&#x6CD5;"><a name="&#x5176;&#x4ED6;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x4ED6;&#x65B9;&#x6CD5;</h3>
+<p>&#x8BA1;&#x6570; count()</p>
+<pre><code>li=[1,2,3,&apos;taibai&apos;,&apos;yuanhao&apos;,[1,&apos;alix&apos;,3],True]
+print(li.count(&apos;fsh&apos;))  
+print(li.count(1)) 
+
+# 0
+# 2
+</code></pre><p>&#x6392;&#x5E8F;</p>
+<p>&#x3000;&#x3000;&#x6B63;&#x6392;&#x5E8F;&#xFF1A;sort()</p>
+<pre><code>a=[1,2,3,7,4,8,0,3,9]
+a.sort()
+print(a)
+
+[0, 1, 2, 3, 3, 4, 7, 8, 9]
+</code></pre><p>&#x3000;&#x3000;&#x53CD;&#x8F6C;&#xFF1A;reverse()  &#x4E0D;&#x6392;&#x5E8F;&#xFF0C;&#x53EA;&#x662F;&#x5C06;&#x539F;&#x6709;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x6309;&#x7167;&#x4E0E;&#x539F;&#x6765;&#x987A;&#x5E8F;&#x76F8;&#x53CD;&#x7684;&#x65B9;&#x5F0F;&#x8F93;&#x51FA;</p>
+<pre><code>a=[1,2,3,7,4,8,0,3,9]
+a.reverse()
+print(a)
+
+[9, 3, 0, 8, 4, 7, 3, 2, 1]
+</code></pre><h2 id="tuple&#x5143;&#x7956;jackolantern"><a name="tuple&#x5143;&#x7956;jackolantern" class="anchor-navigation-ex-anchor" href="#tuple&#x5143;&#x7956;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>tuple&#x5143;&#x7956;:jack_o_lantern:</h2>
+<p>&#x5143;&#x7EC4;&#x88AB;&#x79F0;&#x4E3A;&#x53EA;&#x8BFB;&#x5217;&#x8868;&#xFF0C;&#x5373;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x88AB;&#x67E5;&#x8BE2;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x4F46;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5207;&#x7247;&#x64CD;&#x4F5C;&#x540C;&#x6837;&#x9002;&#x7528;&#x4E8E;&#x5143;&#x7EC4;&#x3002;&#x4F8B;&#xFF1A;&#xFF08;1&#xFF0C;2&#xFF0C;3&#xFF09;&#xFF08;&quot;a&quot;,&quot;b&quot;,&quot;c&quot;&#xFF09;</p>
+<pre><code>a=(1,2,3)
+print(a[0])
+print(a[1])
+print(a[2])
+
+1
+2
+3
+</code></pre><h2 id="set&#x96C6;&#x5408;jackolantern"><a name="set&#x96C6;&#x5408;jackolantern" class="anchor-navigation-ex-anchor" href="#set&#x96C6;&#x5408;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>set&#x96C6;&#x5408;:jack_o_lantern:</h2>
+<p>&#x200B;    &#x96C6;&#x5408;&#x662F;&#x65E0;&#x5E8F;&#x7684;&#xFF0C;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5408;&#xFF0C;&#x5B83;&#x91CC;&#x9762;&#x7684;&#x5143;&#x7D20;&#x662F;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#xFF08;&#x4E0D;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#xFF09;&#xFF0C;&#x4F46;&#x96C6;&#x5408;&#x672C;&#x8EAB;&#x662F;&#x4E0D;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#xFF08;&#x6240;&#x4EE5;&#x96C6;&#x5408;&#x505A;&#x4E0D;&#x4E86;&#x5B57;&#x5178;&#x7684;&#x952E;&#xFF09;</p>
+<p>&#x3000;&#x3000;&#x96C6;&#x5408;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E24;&#x70B9;&#xFF1A;</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;1.&#x53BB;&#x91CD;&#xFF0C;&#x628A;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x53D8;&#x6210;&#x96C6;&#x5408;&#xFF0C;&#x5C31;&#x81EA;&#x52A8;&#x53BB;&#x91CD;&#x4E86;</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;2.&#x5173;&#x7CFB;&#x6D4B;&#x8BD5;&#xFF0C;&#x6D4B;&#x8BD5;&#x4E24;&#x7EC4;&#x6570;&#x636E;&#x4E4B;&#x524D;&#x7684;&#x4EA4;&#x96C6;&#x3001;&#x5E76;&#x96C6;&#x3001;&#x5DEE;&#x96C6;&#x7B49;&#x5173;&#x7CFB;</p>
+<h3 id="&#x589E;_2"><a name="&#x589E;_2" class="anchor-navigation-ex-anchor" href="#&#x589E;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x589E;</h3>
+<pre><code>set1 = {&apos;alex&apos;, &apos;wusir&apos;, &apos;ritian&apos;,&apos;barry&apos;}
+set1.add(&apos;&#x666F;&#x5973;&#x795E;&apos;)&#x3000;&#x3000;#&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
+print(set1)
+
+update&#xFF1A;&#x8FED;&#x4EE3;&#x7684;&#x589E;&#x52A0;
+set1.update(&apos;A&apos;)
+print(set1)
+set1.update(&apos;&#x8001;&#x5E08;&apos;)
+print(set1)
+set1.update([1,2,3])
+print(set1)
+</code></pre><h3 id="&#x5220;_2"><a name="&#x5220;_2" class="anchor-navigation-ex-anchor" href="#&#x5220;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;</h3>
+<pre><code>set1 = {&apos;alex&apos;,&apos;wusir&apos;,&apos;ritian&apos;,&apos;egon&apos;,&apos;barry&apos;}
+set1.remove(&apos;alex&apos;)    #&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
+print(set1)
+
+set1.pop()      #&#x968F;&#x673A;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
+print(set1)
+
+set1.clear()    #&#x6E05;&#x7A7A;&#x96C6;&#x5408;
+print(set1)
+
+del set1        #&#x5220;&#x9664;&#x96C6;&#x5408;
+print(set1)
+</code></pre><h3 id="&#x67E5;_2"><a name="&#x67E5;_2" class="anchor-navigation-ex-anchor" href="#&#x67E5;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;</h3>
+<p>&#x96C6;&#x5408;&#x7684;&#x67E5;&#x8BE2;&#x53EA;&#x80FD;&#x7528;for&#x5FAA;&#x73AF;&#x64CD;&#x4F5C;</p>
+<pre><code>set = {1,2,3}
+for i in set:
+    print(i)
+
+1
+2
+3
+</code></pre><h3 id="&#x5176;&#x4ED6;&#x64CD;&#x4F5C;"><a name="&#x5176;&#x4ED6;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x4ED6;&#x64CD;&#x4F5C;</h3>
+<p>&#x4EA4;&#x96C6;&#xFF08;&amp;&#x6216;&#x8005;intersectiion&#xFF09;</p>
+<pre><code>set1 = {1,2,3,4,5}
+set2 = {4,5,6,7,8}
+print(set1 &amp; set2)
+print(set1.intersection(set2))
+</code></pre><p>&#x5E76;&#x96C6;&#xFF08;| &#x6216;&#x8005;union&#xFF09;</p>
+<pre><code>set1 = {1,2,3,4,5}
+set2 = {4,5,6,7,8}
+print(set1 | set2)
+print(set1.union(set2))
+</code></pre><p>&#x5DEE;&#x96C6;&#xFF08;-&#x6216;&#x8005;difference&#xFF09;</p>
+<pre><code>set1 = {1,2,3,4,5}
+set2 = {4,5,6,7,8}
+print(set1- set2)
+print(set1.difference(set2))
+</code></pre><p>&#x53CD;&#x4EA4;&#x96C6;&#xFF08;^&#x6216;&#x8005;symmetric_difference&#xFF09;</p>
+<pre><code>set1 = {1,2,3,4,5}
+set2 = {4,5,6,7,8}
+print(set1 ^ set2)
+print(set1.symmetric_difference(set2))
+</code></pre><p>&#x5B50;&#x96C6;&#x4E0E;&#x8D85;&#x96C6;</p>
+<pre><code>set1 = {1,2,3}
+set2 = {1,2,3,4,5,6}
+print(set1&lt;set2)
+print(set1.issubset(set2))  #&#x8FD9;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#x8BF4;&#x660E;set1&#x662F;set2&#x7684;&#x5B50;&#x96C6;
+
+print(set2&gt;set1)
+print(set2.issuperset(set1))#&#x8FD9;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#x8BF4;&#x660E;set2&#x662F;set1&#x7684;&#x8D85;&#x96C6;
+</code></pre><h3 id="frozenset"><a name="frozenset" class="anchor-navigation-ex-anchor" href="#frozenset"><i class="fa fa-link" aria-hidden="true"></i></a>frozenset</h3>
+<p>frozenset&#x4E0D;&#x53EF;&#x53D8;&#x96C6;&#x5408;&#xFF0C;&#x8BA9;&#x96C6;&#x5408;&#x53D8;&#x6210;&#x4E0D;&#x53EF;&#x53D8;&#x7C7B;&#x578B;</p>
+<pre><code>s = frozenset(&apos;barry&apos;)
+print(s,type(s))    #frozenset({&apos;r&apos;, &apos;a&apos;, &apos;b&apos;, &apos;y&apos;}) &lt;class &apos;frozenset&apos;&gt;
+</code></pre><h2 id="bool&#x5E03;&#x5C14;&#x503C;jackolantern"><a name="bool&#x5E03;&#x5C14;&#x503C;jackolantern" class="anchor-navigation-ex-anchor" href="#bool&#x5E03;&#x5C14;&#x503C;jackolantern"><i class="fa fa-link" aria-hidden="true"></i></a>bool&#x5E03;&#x5C14;&#x503C;:jack_o_lantern:</h2>
+<p>bool&#x53EA;&#x6709;True&#x3001;&#x771F;&#x548C;False&#x3001;&#x5047;&#x4E24;&#x79CD;&#x8868;&#x73B0;&#x5F62;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;&#x53CD;&#x5E94;&#x6761;&#x4EF6;&#x7684;&#x6B63;&#x786E;&#x4E0E;&#x5426;</p>
+<p>&#x3000;&#x3000;&#x771F;   1   True</p>
+<p>&#x3000;&#x3000;&#x5047;   0   False</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../MySQL/04-MySQL之索引.html" class="navigation navigation-prev " aria-label="Previous page: MySQL之索引">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02-File Operations.html" class="navigation navigation-next " aria-label="Next page: File Operations">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Basic Data Type","level":"1.5.5","depth":2,"next":{"title":"File Operations","level":"1.5.6","depth":2,"path":"Python/02-File Operations.md","ref":"Python/02-File Operations.md","articles":[]},"previous":{"title":"MySQL之索引","level":"1.5.4","depth":2,"path":"MySQL/04-MySQL之索引.md","ref":"MySQL/04-MySQL之索引.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","theme-comscore","splitter","-sharing","-lunr","-search","search-plus","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"toggle-chapters":{},"splitter":{},"search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Poppy","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":18,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Poppy","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"study-notes","extension":null},"file":{"path":"Python/01-Basic Data Type.md","mtime":"2018-10-18T09:22:29.228Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-18T09:23:40.380Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
